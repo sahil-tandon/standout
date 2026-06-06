@@ -45,13 +45,18 @@ both win; timid middle-ground does not. Do not default to a look, choose one.
   the app's own UI; a restaurant like a menu. Let the artifact dictate the grid, the
   entry point, the reading order, and the section logic. Two different briefs must not
   produce the same layout in different colors.
-- **Avoid the CATEGORY default, not just the generic default.** Each category has a
-  cliche look: dev tools default to near-black + neon-green + a clean grotesque;
-  synthwave to a striped sun + scanlines + pink/cyan; SaaS to a purple gradient; AI
-  products to violet-on-white. Escaping Inter-on-white is not enough if you land on
-  the category's own stock skin. Name the category's default out loud, then make at
-  least one unexpected, ownable choice (palette, typeface, or structural conceit) that
-  the category does not already overuse.
+- **Beat the LAZY default, not the genre itself.** Each category has a cliche look:
+  dev tools default to near-black + neon-green + a clean grotesque; synthwave to a
+  striped sun + scanlines + pink/cyan; SaaS to a purple gradient; AI to violet-on-white.
+  The enemy is reaching for that stock skin on autopilot, not the aesthetic itself. A
+  bold genre look that an audience genuinely loves is a win: a synthwave poster, a
+  brutalist site, a vaporwave gradient can all be exactly right. The disqualifier is
+  laziness and broken execution, never familiarity. So: name the category's default
+  out loud, then EITHER make an unexpected, ownable choice, OR commit to the genre look
+  with enough craft, one fresh twist, and flawless legibility that it transcends the
+  stock version. Delight beats novelty. Never sand off the mood that makes the thing
+  appealing (see "keep the subject's emotional register" below) just to look different;
+  fix the real flaws (legibility, contrast, hierarchy) instead of fleeing the look.
 
 ### 2. Build the visual system
 Type, color, and layout carry most of the impression.

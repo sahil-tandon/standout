@@ -114,9 +114,13 @@ If the work has any of these, it reads as machine-default. Replace each one.
   headline with a single accent-colored word, supporting copy, paired CTAs. It is a
   template tell when a dev tool, a magazine, and a festival share one architecture.
   Derive structure from the artifact instead.
-- **The category-default skin.** Avoiding Inter-on-white but landing on dev-tool
-  near-black + neon-green + clean grotesque, or the synthwave striped-sun + scanlines +
-  pink/cyan starter pack, or the AI-product violet. Category stock is still stock.
+- **The LAZY category-default skin.** Reaching on autopilot for dev-tool near-black +
+  neon-green + clean grotesque, or the synthwave starter pack, or the AI-product
+  violet, with no craft and no twist. Note the nuance: the genre look is not banned. A
+  synthwave poster or a brutalist site executed with real craft, a fresh twist, and
+  flawless legibility is a win, audiences love these for a reason. The fail is the
+  stock version on autopilot, not the aesthetic. Commit to the look and elevate it, or
+  choose another, but never ship the lazy default.
 - **Killer hero, broken second frame.** A strong first screen followed by a flat
   gradient placeholder, an empty block, or a markedly weaker section. Finish past the
   fold; every frame earns its place.
