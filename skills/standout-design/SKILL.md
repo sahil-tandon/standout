@@ -101,25 +101,38 @@ Verify the work escaped the generic look and hit the craft bar:
 Even without reading the references, hold these:
 - **No default display fonts.** Not Inter/Roboto/Arial/system. Pick a real,
   characterful typeface and use it decisively.
-- **One dominant color + one sharp accent.** Not an even rainbow. Built in OKLCH.
+- **One dominant color + one sharp accent.** Not an even rainbow. Built in OKLCH. The
+  palette itself must escape the category default: a fresh concept on a stock palette
+  still reads stock. Neon/green-on-black for anything "tech" or "electronic", violet
+  for AI, is a default even with a clever idea on top. Pick a palette the category does
+  not already own.
 - **Atmosphere, not flat fills.** Grain, gradient mesh, glow, or texture, tuned to the
   direction.
 - **An intentional layout.** Breakout, asymmetry, or a strong structural device, not
   equal centered cards.
 - **Architecture from the artifact, not a reused skeleton.** Do not ship the same
   nav + eyebrow + accent-word headline + CTA structure for every brief. And do not
-  lean on the same one signature device (the two-tone accent word, the mono eyebrow)
-  every single time; they are good moves, not a house style to repeat.
-- **Load-bearing text is always the most legible thing.** Contrast-check every
-  headline and key line against what is actually behind it. The most important word on
-  the page (the brand name, the hero line) must never sit on a busy or bright area
-  that makes it hard to read. If type crosses imagery, knock it out, plate it, or move
-  it.
-- **Every frame holds the hero's craft.** Juries and visitors scroll. No section may
-  drop off into a flat gradient placeholder or an empty block. When you have no real
+  lean on the same one signature device every single time. The mono-eyebrow plus a
+  hyper-specific spec block, and the two-tone accent-color word, are good moves that
+  become a personal formula when they appear on every page. Vary how you handle
+  metadata and emphasis per brief; do not let your own tics become the new template.
+- **All text is legible against what is actually behind it, not just the headline.**
+  Contrast-check every line, body copy included. Keep decorative motifs (traces, grid
+  lines, textures) OUT of any text's bounding box; a wire running through a descender
+  or low-contrast copy on a busy grid fails. The most important words (brand, hero
+  line) must be the most legible thing on the page; if type crosses imagery, knock it
+  out, plate it, or move it.
+- **The concept extends into every section, not just the hero.** The metaphor that
+  makes the hero sing must escalate, not evaporate, below the fold. The second screen,
+  usually the product, the spread, or the proof, is where you prove the idea is real;
+  carry the same motif and the same type system through it. A brilliant hero bolted to
+  a generic second screen is the most common way good work stops short of an award.
+- **Every frame holds the hero's craft, and every mark earns its place.** No section
+  may drop into a flat gradient placeholder or an empty block; when you have no real
   image asset, build a crafted placeholder (line art, duotone, generative texture, a
-  type-driven composition), never a plain rectangle that reads as "image failed to
-  load."
+  type-driven composition). Decorative ornament must be structural: if you use a
+  systemic motif (a grid, circuit traces, a diagram, staff lines) it must map to real
+  content, not wander as atmosphere. Cut dead space and lines that connect nothing.
 - **One orchestrated motion moment** with a single reused easing token; only
   `transform`/`opacity` animated.
 - **`prefers-reduced-motion` honored** with a designed calm fallback, every time.

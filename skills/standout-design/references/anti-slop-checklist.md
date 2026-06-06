@@ -34,12 +34,20 @@ tells to avoid.
       eyebrow + accent-word headline + CTA skeleton you would use for anything.
 - [ ] You did not lean on the same one signature device (two-tone accent word, mono
       eyebrow) you reach for every time.
-- [ ] You escaped the CATEGORY default, not just the generic one (named the cliche
-      look of this category and made one ownable choice against it).
+- [ ] You escaped the CATEGORY default in both structure AND palette (named the cliche
+      look of this category and made one ownable choice against it; the palette is not
+      the category's stock skin like neon-on-black for tech).
+- [ ] You did not reuse your own tics: the mono-eyebrow + hyper-specific spec block,
+      and the two-tone accent-color word, are not on every page out of habit.
+- [ ] The concept extends into every section, especially the second/product screen.
+      The hero's metaphor and type system carry through; it does not evaporate below
+      the fold into a generic second screen.
 - [ ] Every section holds the hero's craft level. No frame drops into a flat gradient
       block, an empty placeholder, or a visibly weaker second screen.
-- [ ] Load-bearing text (brand name, hero line) is the MOST legible thing on the page,
-      contrast-checked against whatever is actually behind it.
+- [ ] Decorative ornament is structural: any systemic motif (grid, traces, diagram)
+      maps to real content; no lines that connect nothing, no dead empty quadrants.
+- [ ] ALL text (body copy included, not just the headline) is legible against what is
+      actually behind it; motifs are kept out of every text element's box.
 
 **Motion**
 - [ ] One orchestrated load reveal that resolves into the usable page.
@@ -114,4 +122,19 @@ If the work has any of these, it reads as machine-default. Replace each one.
   fold; every frame earns its place.
 - **Critical text fighting its background.** The brand name or hero line placed over a
   busy gradient, a bright shape, or scanlines so it loses legibility. The most
-  important words must read instantly; knock them out, plate them, or move them.
+  important words must read instantly; knock them out, plate them, or move them. This
+  applies to body copy too: motifs (traces, grids, textures) running through any text
+  is a fail.
+- **The concept that evaporates below the fold.** A striking metaphor in the hero that
+  vanishes on the next screen, leaving a generic product UI or a plain section. The
+  idea must escalate through the page, especially onto the product/second screen.
+- **The category-default palette.** A fresh concept rendered in the category's stock
+  colors (neon/green-on-black for tech and electronic, violet for AI, candy gradients
+  for consumer). Concept does not excuse a default palette; change the palette too.
+- **Decorative-not-structural ornament.** Circuit traces that connect nothing, grid
+  lines as pure texture, diagrams that do not map to content, and dead empty quadrants.
+  Atmosphere cosplaying as a system reads as filler. Every motif should carry meaning
+  or be cut.
+- **Your own repeated signature.** Even bespoke instincts become a template when
+  reused every time: the mono eyebrow plus a hyper-specific spec block, or the
+  one-accent-colored word in the headline, on every single page. Vary the device.

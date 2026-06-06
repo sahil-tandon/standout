@@ -15,6 +15,13 @@ All notable changes to this project are documented here. The format follows
   legible element, and to hold the hero's craft past the fold with crafted
   placeholders instead of flat gradient blocks. Noted that some "safe" faces
   (Space Grotesk, Geist) have become category defaults.
+- Second review round (iteration 3). Added rules that the concept must extend into
+  every section (not evaporate below the fold, and prove itself on the product/second
+  screen), that the palette must escape the category default too (a fresh concept on a
+  stock palette still reads stock), that decorative motifs must be structural (no lines
+  that connect nothing, no dead space), that ALL text (not just the headline) must
+  clear its background, and that the designer's own tics (mono eyebrow + spec block,
+  the two-tone accent word) must not become a repeated formula.
 
 ## [v0.1.0] (2026-06-06): Initial standout-design skill
 
