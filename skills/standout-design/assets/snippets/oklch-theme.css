@@ -1,0 +1,138 @@
+/*
+ * oklch-theme.css
+ * ------------------------------------------------------------------
+ * A complete theming token system built on OKLCH, using CSS relative
+ * color syntax to derive surface/hover/border variants from a small
+ * set of base hues, plus color-mix() for borders and "glass" fills.
+ *
+ * HOW TO USE
+ *   1. Include this file early (it defines :root tokens).
+ *   2. Reference tokens anywhere: `background: var(--surface);`
+ *      `color: var(--text);` `border-color: var(--border);` etc.
+ *   3. Toggle themes by setting `data-theme="dark"` (or "light") on
+ *      <html>. With no attribute it follows the OS via prefers-color-
+ *      scheme (see the @media block). Transitions are smooth.
+ *
+ * WHY OKLCH
+ *   Perceptually uniform: shifting Lightness (L) by a fixed amount
+ *   looks like the same step across any hue, so derived variants stay
+ *   balanced. Relative color syntax `oklch(from <c> ...)` lets us pull
+ *   a color apart into l/c/h channels and rebuild it.
+ *
+ * DEPENDENCIES
+ *   None. Requires a browser with OKLCH + relative-color + color-mix
+ *   support (Chrome/Edge 119+, Safari 16.4+/18 for rel-color, FF 128+).
+ * ------------------------------------------------------------------
+ */
+
+:root {
+  color-scheme: light dark;
+
+  /* --- Base palette (light theme defaults) ----------------------- */
+  --bg-base: oklch(98.5% 0.005 250);
+  --surface-base: oklch(100% 0 0);
+  --text-base: oklch(22% 0.02 260);
+  --accent-base: oklch(62% 0.2 265);
+
+  /* --- Derived background / surface ramp (relative color) -------- */
+  /* Subtle elevation by nudging Lightness off the surface base. */
+  --bg: var(--bg-base);
+  --surface: var(--surface-base);
+  --surface-raised: oklch(from var(--surface-base) calc(l - 0.03) c h);
+  --surface-sunken: oklch(from var(--bg-base) calc(l - 0.025) c h);
+  --surface-hover: oklch(from var(--surface-base) calc(l - 0.05) c h);
+
+  /* --- Text ramp ------------------------------------------------- */
+  --text: var(--text-base);
+  --text-muted: oklch(from var(--text-base) calc(l + 0.25) calc(c * 0.7) h);
+  --text-subtle: oklch(from var(--text-base) calc(l + 0.4) calc(c * 0.5) h);
+
+  /* --- Accent ramp ----------------------------------------------- */
+  --accent: var(--accent-base);
+  --accent-hover: oklch(from var(--accent-base) calc(l - 0.06) c h);
+  --accent-active: oklch(from var(--accent-base) calc(l - 0.12) c h);
+  --accent-soft: oklch(from var(--accent-base) calc(l + 0.3) calc(c * 0.4) h);
+  /* Readable text color to place ON an accent fill. */
+  --on-accent: oklch(98% 0.01 var(--accent-base, 265));
+
+  /* --- Borders & glass via color-mix ----------------------------- */
+  /* Borders = text mixed into transparency, so they ride the theme. */
+  --border: color-mix(in oklch, var(--text) 14%, transparent);
+  --border-strong: color-mix(in oklch, var(--text) 28%, transparent);
+  /* Glass = surface tinted toward translucency for backdrop panels. */
+  --glass: color-mix(in oklch, var(--surface) 60%, transparent);
+  --glass-border: color-mix(in oklch, var(--text) 10%, transparent);
+
+  /* --- Focus ring ------------------------------------------------ */
+  --ring: color-mix(in oklch, var(--accent) 55%, transparent);
+
+  /* --- Theme transition ------------------------------------------ */
+  --theme-ease: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth theme swaps on themeable surfaces (not on every property). */
+:where(body, [class]) {
+  transition:
+    background-color var(--theme-ease),
+    border-color var(--theme-ease),
+    color var(--theme-ease);
+}
+
+/* --- DARK THEME --------------------------------------------------- */
+/* Applied explicitly via [data-theme="dark"] ... */
+[data-theme="dark"] {
+  --bg-base: oklch(17% 0.02 260);
+  --surface-base: oklch(21% 0.022 262);
+  --text-base: oklch(95% 0.01 255);
+  --accent-base: oklch(72% 0.17 265);
+
+  /* In dark mode, raised surfaces get LIGHTER, not darker. */
+  --surface-raised: oklch(from var(--surface-base) calc(l + 0.04) c h);
+  --surface-sunken: oklch(from var(--bg-base) calc(l - 0.02) c h);
+  --surface-hover: oklch(from var(--surface-base) calc(l + 0.06) c h);
+
+  --text-muted: oklch(from var(--text-base) calc(l - 0.22) calc(c * 0.8) h);
+  --text-subtle: oklch(from var(--text-base) calc(l - 0.38) calc(c * 0.6) h);
+
+  --accent-hover: oklch(from var(--accent-base) calc(l + 0.05) c h);
+  --accent-active: oklch(from var(--accent-base) calc(l + 0.1) c h);
+  --accent-soft: oklch(from var(--accent-base) calc(l - 0.35) calc(c * 0.5) h);
+  --on-accent: oklch(15% 0.02 265);
+
+  --border: color-mix(in oklch, var(--text) 16%, transparent);
+  --border-strong: color-mix(in oklch, var(--text) 32%, transparent);
+  --glass: color-mix(in oklch, var(--surface) 55%, transparent);
+}
+
+/* ... or automatically via the OS, unless explicitly set to light. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-base: oklch(17% 0.02 260);
+    --surface-base: oklch(21% 0.022 262);
+    --text-base: oklch(95% 0.01 255);
+    --accent-base: oklch(72% 0.17 265);
+
+    --surface-raised: oklch(from var(--surface-base) calc(l + 0.04) c h);
+    --surface-sunken: oklch(from var(--bg-base) calc(l - 0.02) c h);
+    --surface-hover: oklch(from var(--surface-base) calc(l + 0.06) c h);
+
+    --text-muted: oklch(from var(--text-base) calc(l - 0.22) calc(c * 0.8) h);
+    --text-subtle: oklch(from var(--text-base) calc(l - 0.38) calc(c * 0.6) h);
+
+    --accent-hover: oklch(from var(--accent-base) calc(l + 0.05) c h);
+    --accent-active: oklch(from var(--accent-base) calc(l + 0.1) c h);
+    --accent-soft: oklch(from var(--accent-base) calc(l - 0.35) calc(c * 0.5) h);
+    --on-accent: oklch(15% 0.02 265);
+
+    --border: color-mix(in oklch, var(--text) 16%, transparent);
+    --border-strong: color-mix(in oklch, var(--text) 32%, transparent);
+    --glass: color-mix(in oklch, var(--surface) 55%, transparent);
+  }
+}
+
+/* Honor reduced-motion: don't animate the theme cross-fade. */
+@media (prefers-reduced-motion: reduce) {
+  :where(body, [class]) {
+    transition: none;
+  }
+}

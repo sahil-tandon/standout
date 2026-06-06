@@ -1,0 +1,20 @@
+{
+  "name": "standout",
+  "description": "The standout-* family of craft skills for Claude Code. First up: standout-design.",
+  "owner": {
+    "name": "Sahil Tandon"
+  },
+  "plugins": [
+    {
+      "name": "standout-design",
+      "description": "Build standout frontends for websites and apps with real craft: bold art direction, distinctive typography, high-impact motion, and accessibility, none of the generic AI look.",
+      "version": "0.1.0",
+      "source": "./",
+      "author": {
+        "name": "Sahil Tandon"
+      },
+      "category": "design",
+      "homepage": "https://github.com/sahil-tandon/standout-design"
+    }
+  ]
+}

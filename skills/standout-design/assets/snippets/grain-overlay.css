@@ -1,0 +1,62 @@
+/*
+ * grain-overlay.css
+ * ------------------------------------------------------------------
+ * A fixed, full-viewport film-grain overlay rendered from an inline
+ * SVG feTurbulence filter, embedded as a data-URL background image.
+ *
+ * HOW TO USE
+ *   1. Drop this file into your styles.
+ *   2. Add `class="grain"` to any element you want to host the grain,
+ *      OR apply it to <body> for a page-wide effect (default below
+ *      targets `body::before`).
+ *   3. The overlay is `position: fixed`, `pointer-events: none`, and
+ *      sits above content via z-index but never intercepts clicks.
+ *
+ * TUNING
+ *   --grain-opacity      overall strength (keep it low: 0.02-0.08)
+ *   --grain-size         tile size in px (larger = coarser grain)
+ *   --grain-frequency    feTurbulence baseFrequency (higher = finer)
+ *   --grain-blend        mix-blend-mode (overlay / soft-light / normal)
+ *
+ * DEPENDENCIES
+ *   None. Pure CSS + inline SVG. No JS, no assets.
+ *
+ * NOTE ON prefers-reduced-data
+ *   Grain is a non-essential decorative texture. Under
+ *   `prefers-reduced-data: reduce` we drop the (admittedly tiny but
+ *   GPU-compositing) overlay entirely to respect data/perf intent.
+ * ------------------------------------------------------------------
+ */
+
+:where(.grain, body.grain) {
+  --grain-opacity: 0.045;
+  --grain-size: 180px;
+  --grain-frequency: 0.8;
+  --grain-blend: overlay;
+}
+
+/*
+ * The data-URL below is an SVG with an feTurbulence "fractalNoise"
+ * filter rendered onto a full-bleed rect. numOctaves controls detail.
+ * stitchTiles="stitch" keeps the noise seamless when the image tiles.
+ */
+:where(.grain, body.grain)::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  mix-blend-mode: var(--grain-blend);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: var(--grain-size) var(--grain-size);
+  /* Promote to its own layer so the blend doesn't repaint content. */
+  will-change: opacity;
+}
+
+/* Respect users who have asked sites to use less data / fewer effects. */
+@media (prefers-reduced-data: reduce) {
+  :where(.grain, body.grain)::before {
+    display: none;
+  }
+}

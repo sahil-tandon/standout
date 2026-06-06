@@ -1,0 +1,104 @@
+/*
+ * fluid-type.css
+ * ------------------------------------------------------------------
+ * A fluid typographic + spacing scale built entirely on clamp(), so
+ * font sizes and spacing interpolate smoothly between a min viewport
+ * and a max viewport with no breakpoints. Includes line-height tokens.
+ *
+ * HOW TO USE
+ *   1. Include this file. It defines :root tokens + helper classes.
+ *   2. Use tokens directly: `font-size: var(--text-h1);`
+ *      `margin-block: var(--space-l);`
+ *      or apply the helper classes: <h1 class="text-h1">.
+ *
+ * THE CLAMP FORMULA
+ *   clamp(MIN, PREFERRED, MAX) where PREFERRED mixes a rem base with a
+ *   vw slope. The slope/intercept here are tuned for a fluid range of
+ *   ~360px (min) to ~1240px (max) viewport. Below/above those, the
+ *   min/max clamp values lock in. Using rem in the min/max keeps it
+ *   zoom- and user-font-size friendly (accessibility).
+ *
+ * DEPENDENCIES
+ *   None. clamp() is universally supported.
+ * ------------------------------------------------------------------
+ */
+
+:root {
+  /* --- Type scale (min .. fluid .. max) --------------------------- */
+  /* Roughly a 1.25 (major third) ratio at the small end, widening. */
+  --text-caption: clamp(0.75rem, 0.71rem + 0.18vw, 0.875rem);
+  --text-small: clamp(0.875rem, 0.84rem + 0.18vw, 1rem);
+  --text-body: clamp(1rem, 0.95rem + 0.27vw, 1.1875rem);
+  --text-lead: clamp(1.125rem, 1.04rem + 0.45vw, 1.5rem);
+  --text-h3: clamp(1.375rem, 1.2rem + 0.91vw, 2rem);
+  --text-h2: clamp(1.75rem, 1.43rem + 1.59vw, 2.75rem);
+  --text-h1: clamp(2.25rem, 1.7rem + 2.73vw, 4rem);
+  --text-hero: clamp(2.75rem, 1.66rem + 5.45vw, 6.5rem);
+
+  /* --- Line-height tokens (unitless, scale with font-size) -------- */
+  --leading-none: 1;       /* hero / display: tight, dramatic */
+  --leading-tight: 1.1;    /* large headings */
+  --leading-snug: 1.3;     /* subheads / leads */
+  --leading-normal: 1.6;   /* body copy */
+  --leading-relaxed: 1.75; /* long-form reading */
+
+  /* --- Tracking (letter-spacing) helpers -------------------------- */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+
+  /* --- Fluid spacing scale --------------------------------------- */
+  /* Same clamp approach; a modular spacing ramp from 3xs to 3xl. */
+  --space-3xs: clamp(0.25rem, 0.24rem + 0.05vw, 0.3125rem);
+  --space-2xs: clamp(0.5rem, 0.48rem + 0.09vw, 0.625rem);
+  --space-xs: clamp(0.75rem, 0.71rem + 0.18vw, 0.9375rem);
+  --space-s: clamp(1rem, 0.95rem + 0.27vw, 1.25rem);
+  --space-m: clamp(1.5rem, 1.43rem + 0.36vw, 1.875rem);
+  --space-l: clamp(2rem, 1.86rem + 0.73vw, 2.75rem);
+  --space-xl: clamp(3rem, 2.73rem + 1.36vw, 4.5rem);
+  --space-2xl: clamp(4rem, 3.45rem + 2.73vw, 7rem);
+  --space-3xl: clamp(6rem, 5rem + 5vw, 11rem);
+}
+
+/* --- Helper classes ------------------------------------------------ */
+.text-hero {
+  font-size: var(--text-hero);
+  line-height: var(--leading-none);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+}
+.text-h1 {
+  font-size: var(--text-h1);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+}
+.text-h2 {
+  font-size: var(--text-h2);
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+}
+.text-h3 {
+  font-size: var(--text-h3);
+  line-height: var(--leading-snug);
+  text-wrap: balance;
+}
+.text-lead {
+  font-size: var(--text-lead);
+  line-height: var(--leading-snug);
+  text-wrap: pretty;
+}
+.text-body {
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  text-wrap: pretty;
+}
+.text-small {
+  font-size: var(--text-small);
+  line-height: var(--leading-normal);
+}
+.text-caption {
+  font-size: var(--text-caption);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-wide);
+}

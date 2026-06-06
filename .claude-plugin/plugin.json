@@ -1,0 +1,25 @@
+{
+  "name": "standout-design",
+  "description": "Build standout frontends for websites and apps with real craft: bold art direction, distinctive typography, high-impact motion, and accessibility, none of the generic AI look.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Sahil Tandon"
+  },
+  "homepage": "https://github.com/sahil-tandon/standout-design",
+  "repository": "https://github.com/sahil-tandon/standout-design",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "frontend",
+    "ui",
+    "ux",
+    "web-design",
+    "css",
+    "animation",
+    "motion",
+    "typography",
+    "accessibility",
+    "webgl",
+    "creative-coding"
+  ]
+}

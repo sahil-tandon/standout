@@ -1,0 +1,80 @@
+/*
+ * directional-underline.css
+ * ------------------------------------------------------------------
+ * A link underline that draws IN from the side the cursor entered and
+ * draws OUT toward the side it leaves, using a pseudo-element with
+ * scaleX + a transform-origin that we flip on hover via JS-set data
+ * attribute. A robust CSS-only fallback (always draws left->right) is
+ * included for when no JS runs.
+ *
+ * HOW TO USE
+ *   1. Add `class="dir-underline"` to your <a> (or any inline link).
+ *   2. (Optional, for true directionality) attach the tiny JS at the
+ *      bottom of this comment that sets `data-enter="left|right"` on
+ *      mouseenter/mouseleave based on cursor X relative to the link.
+ *   3. Without that JS, the CSS-only fallback still animates a clean
+ *      left-origin underline on hover/focus.
+ *
+ * THE TECHNIQUE
+ *   A `::after` bar sits under the text at scaleX(0). transform-origin
+ *   determines which edge it grows from. On hover we scaleX(1) growing
+ *   from the entry edge; on un-hover we scaleX(0) but FIRST flip the
+ *   origin to the opposite edge so it retracts toward the exit side.
+ *
+ * COMPANION JS (optional, vanilla):
+ *   document.querySelectorAll('.dir-underline').forEach((el) => {
+ *     const side = (e) => {
+ *       const r = el.getBoundingClientRect();
+ *       return e.clientX < r.left + r.width / 2 ? 'left' : 'right';
+ *     };
+ *     el.addEventListener('mouseenter', (e) => {
+ *       el.dataset.enter = side(e);     // origin = entry edge
+ *     });
+ *     el.addEventListener('mouseleave', (e) => {
+ *       el.dataset.enter = side(e);     // origin = exit edge
+ *     });
+ *   });
+ *
+ * DEPENDENCIES
+ *   None for the CSS. The optional directional behavior needs the
+ *   ~10 lines of vanilla JS above (no library).
+ * ------------------------------------------------------------------
+ */
+
+.dir-underline {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.dir-underline::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: -0.1em;
+  block-size: 0.08em;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center; /* CSS-only fallback: grow from left */
+  transition: transform 280ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Grow on hover/focus. */
+.dir-underline:hover::after,
+.dir-underline:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* --- Directional enhancement (driven by data-enter from JS) -------
+ * On enter, origin = the side the cursor came from, so it grows from
+ * there. On leave, JS rewrites data-enter to the EXIT side and the
+ * :hover state is gone, so scaleX(0) retracts toward that exit edge. */
+.dir-underline[data-enter="left"]::after  { transform-origin: left center; }
+.dir-underline[data-enter="right"]::after { transform-origin: right center; }
+
+/* Respect reduced motion: snap instead of animating the draw. */
+@media (prefers-reduced-motion: reduce) {
+  .dir-underline::after {
+    transition: none;
+  }
+}

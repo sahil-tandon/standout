@@ -1,0 +1,100 @@
+/*
+ * editorial-grid.css
+ * ------------------------------------------------------------------
+ * A magazine-style content grid using NAMED grid lines so children
+ * can opt into three column tracks: `content` (default reading
+ * column), `breakout` (slightly wider), and `full` (edge to edge).
+ * Includes a subgrid example so a card's internals align to the
+ * parent grid's rows.
+ *
+ * HOW TO USE
+ *   1. Add `class="editorial"` to a wrapping <section> / <article>.
+ *   2. By default, direct children land in the `content` column.
+ *   3. Opt a child wider with `class="breakout"` or `class="full"`.
+ *   4. For aligned card internals, use the `.subgrid-card` pattern.
+ *
+ * THE NAMED-LINE TECHNIQUE
+ *   We define line names ([full-start] [breakout-start] ...
+ *   [content-start] ... [content-end] [breakout-end] [full-end]) on
+ *   the column template. Children then say
+ *   `grid-column: content` (shorthand for content-start/content-end).
+ *   The outer columns use minmax() so margins shrink gracefully.
+ *
+ * DEPENDENCIES
+ *   None. Subgrid needs Chrome 117+, Safari 16+, Firefox 71+.
+ * ------------------------------------------------------------------
+ */
+
+.editorial {
+  --gap: clamp(1rem, 0.5rem + 2vw, 2rem);
+  --content-max: 65ch;     /* comfortable reading measure */
+  --breakout-pad: 6vw;     /* extra width either side of content */
+
+  display: grid;
+  column-gap: var(--gap);
+  grid-template-columns:
+    [full-start] minmax(var(--gap), 1fr)
+    [breakout-start] minmax(0, var(--breakout-pad))
+    [content-start] min(var(--content-max), 100% - var(--gap) * 2)
+    [content-end] minmax(0, var(--breakout-pad))
+    [breakout-end] minmax(var(--gap), 1fr)
+    [full-end];
+}
+
+/* Every direct child defaults into the readable content column. */
+.editorial > * {
+  grid-column: content;
+}
+
+/* Opt-in wider zones. The line-name shorthand fills start..end. */
+.editorial > .breakout {
+  grid-column: breakout;
+}
+.editorial > .full {
+  grid-column: full;
+}
+
+/* A full-bleed media block that still pads its caption to content. */
+.editorial > .full-bleed-figure {
+  grid-column: full;
+  display: grid;
+  grid-template-columns: subgrid; /* inherit parent's column lines */
+}
+.editorial > .full-bleed-figure > img {
+  grid-column: full;
+  inline-size: 100%;
+  block-size: auto;
+}
+.editorial > .full-bleed-figure > figcaption {
+  grid-column: content; /* caption snaps back to the reading column */
+  color: var(--text-muted, #666);
+  font-size: 0.875rem;
+  margin-block-start: 0.5rem;
+}
+
+/* ------------------------------------------------------------------
+ * SUBGRID EXAMPLE
+ * A card that spans `breakout`, whose own title/body/meta rows align
+ * to a shared row rhythm defined here. The card declares
+ * `grid-template-rows: subgrid` so children sit on the parent's rows.
+ * ------------------------------------------------------------------ */
+.editorial {
+  /* Define a row rhythm the cards can borrow via subgrid. */
+  row-gap: var(--gap);
+  grid-auto-rows: min-content;
+}
+
+.subgrid-card {
+  grid-column: breakout;
+  display: grid;
+  grid-template-rows: subgrid;
+  /* Span 3 parent rows: title, body, meta. */
+  grid-row: span 3;
+  gap: 0.5rem;
+  padding: var(--gap);
+  border: 1px solid var(--border, rgba(0, 0, 0, 0.12));
+  border-radius: 0.75rem;
+}
+.subgrid-card > h3 { grid-row: 1; margin: 0; }
+.subgrid-card > p  { grid-row: 2; margin: 0; }
+.subgrid-card > .meta { grid-row: 3; color: var(--text-muted, #666); }
