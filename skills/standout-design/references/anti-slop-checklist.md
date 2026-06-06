@@ -28,6 +28,19 @@ tells to avoid.
 - [ ] Intentional grid with at least one breakout or deliberate asymmetry.
 - [ ] Not a stack of equal centered cards; not a predictable hero-features-CTA dump.
 
+**Architecture and follow-through**
+- [ ] The page structure is derived from THIS artifact (a magazine reads as a printed
+      object, a festival as a poster, an app as its own UI), not the same nav +
+      eyebrow + accent-word headline + CTA skeleton you would use for anything.
+- [ ] You did not lean on the same one signature device (two-tone accent word, mono
+      eyebrow) you reach for every time.
+- [ ] You escaped the CATEGORY default, not just the generic one (named the cliche
+      look of this category and made one ownable choice against it).
+- [ ] Every section holds the hero's craft level. No frame drops into a flat gradient
+      block, an empty placeholder, or a visibly weaker second screen.
+- [ ] Load-bearing text (brand name, hero line) is the MOST legible thing on the page,
+      contrast-checked against whatever is actually behind it.
+
 **Motion**
 - [ ] One orchestrated load reveal that resolves into the usable page.
 - [ ] Reused easing/duration tokens, not ad-hoc values per element.
@@ -89,3 +102,16 @@ If the work has any of these, it reads as machine-default. Replace each one.
 - **No first-3-seconds hook, no detail craft** (default focus rings, no hover
   thought, default 404/empty states). Distinctiveness lives in the details as much
   as the hero.
+- **The same page skeleton for every brief.** Nav, mono eyebrow strip, one giant
+  headline with a single accent-colored word, supporting copy, paired CTAs. It is a
+  template tell when a dev tool, a magazine, and a festival share one architecture.
+  Derive structure from the artifact instead.
+- **The category-default skin.** Avoiding Inter-on-white but landing on dev-tool
+  near-black + neon-green + clean grotesque, or the synthwave striped-sun + scanlines +
+  pink/cyan starter pack, or the AI-product violet. Category stock is still stock.
+- **Killer hero, broken second frame.** A strong first screen followed by a flat
+  gradient placeholder, an empty block, or a markedly weaker section. Finish past the
+  fold; every frame earns its place.
+- **Critical text fighting its background.** The brand name or hero line placed over a
+  busy gradient, a bright shape, or scanlines so it loses legibility. The most
+  important words must read instantly; knock them out, plate them, or move them.

@@ -20,6 +20,38 @@ maps to a concrete CSS or GSAP API.
 
 ---
 
+## Architecture from the artifact (read this first)
+
+Before reaching for any grid primitive, decide the page's whole structure from the
+thing you are designing, not from a default skeleton. The fastest way to look
+generated is to ship every brief as the same page: top nav, a mono eyebrow strip, one
+giant headline with a single accent-colored word, supporting copy, paired CTAs. That
+skeleton is fine once; across briefs it is a template tell.
+
+Instead, ask what physical or interface object this brand is, and let that set the
+layout logic:
+
+- A magazine or journal reads as a **printed object**: a masthead, a folio line, a
+  real contents list, multi-column justified spreads, pull quotes, captions.
+- A festival or event reads as a **poster or flyer**: a dominant bill, stacked
+  names, ticket tiers as a price list, a schedule grid.
+- An app or tool reads as **its own UI**: the product surface IS the hero, real
+  panels, keyboard hints, state.
+- A restaurant reads as a **menu**; a film as **titles and stills**; an archive as
+  an **index**.
+
+Two different briefs must not resolve to the same layout in different colors. Vary the
+grid, the entry point, the reading order, and the section rhythm per artifact.
+
+**Follow through past the fold.** The recurring failure mode is a strong hero followed
+by a weak or broken second screen. Every section must hold the hero's craft. When you
+have no real image asset, never drop a flat gradient rectangle (it reads as "image
+failed to load"); build a crafted placeholder instead: line art, a duotone or halftone
+pattern, a generative texture (see `webgl-3d-and-generative.md`), or a type-driven
+composition that interacts with the surrounding layout.
+
+---
+
 ## Editorial grid with named lines
 
 The single most reusable layout primitive on editorial sites is a grid whose **lines are

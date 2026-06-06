@@ -4,6 +4,18 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and this project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+- Hardened the skill from first-round design reviews. Content is now visible by
+  default (scroll reveals gated behind `@supports` and a JS class, so unsupported
+  browsers and no-JS loads still show everything). Added guidance to derive page
+  architecture from the artifact rather than reusing one skeleton, to avoid the
+  category default (not just the generic one), to keep load-bearing text the most
+  legible element, and to hold the hero's craft past the fold with crafted
+  placeholders instead of flat gradient blocks. Noted that some "safe" faces
+  (Space Grotesk, Geist) have become category defaults.
+
 ## [v0.1.0] (2026-06-06): Initial standout-design skill
 
 ### Added

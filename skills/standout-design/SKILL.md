@@ -37,6 +37,21 @@ both win; timid middle-ground does not. Do not default to a look, choose one.
   organic, luxury, playful, industrial, ...). See `references/aesthetic-directions.md`.
 - Vary across projects. Never converge on the same fonts, palette, or layout every
   time. Alternate light/dark, serif/grotesque, calm/loud.
+- **Derive the page's ARCHITECTURE from the artifact, not from a default skeleton.**
+  The single biggest tell of generated design is that every brief comes out as the
+  same page: top nav, a mono eyebrow strip, one giant headline with a single
+  accent-colored word, supporting copy, paired CTAs. Refuse that. A magazine should
+  feel like a folded printed object; a festival like a poster or flyer; an app like
+  the app's own UI; a restaurant like a menu. Let the artifact dictate the grid, the
+  entry point, the reading order, and the section logic. Two different briefs must not
+  produce the same layout in different colors.
+- **Avoid the CATEGORY default, not just the generic default.** Each category has a
+  cliche look: dev tools default to near-black + neon-green + a clean grotesque;
+  synthwave to a striped sun + scanlines + pink/cyan; SaaS to a purple gradient; AI
+  products to violet-on-white. Escaping Inter-on-white is not enough if you land on
+  the category's own stock skin. Name the category's default out loud, then make at
+  least one unexpected, ownable choice (palette, typeface, or structural conceit) that
+  the category does not already overuse.
 
 ### 2. Build the visual system
 Type, color, and layout carry most of the impression.
@@ -91,9 +106,26 @@ Even without reading the references, hold these:
   direction.
 - **An intentional layout.** Breakout, asymmetry, or a strong structural device, not
   equal centered cards.
+- **Architecture from the artifact, not a reused skeleton.** Do not ship the same
+  nav + eyebrow + accent-word headline + CTA structure for every brief. And do not
+  lean on the same one signature device (the two-tone accent word, the mono eyebrow)
+  every single time; they are good moves, not a house style to repeat.
+- **Load-bearing text is always the most legible thing.** Contrast-check every
+  headline and key line against what is actually behind it. The most important word on
+  the page (the brand name, the hero line) must never sit on a busy or bright area
+  that makes it hard to read. If type crosses imagery, knock it out, plate it, or move
+  it.
+- **Every frame holds the hero's craft.** Juries and visitors scroll. No section may
+  drop off into a flat gradient placeholder or an empty block. When you have no real
+  image asset, build a crafted placeholder (line art, duotone, generative texture, a
+  type-driven composition), never a plain rectangle that reads as "image failed to
+  load."
 - **One orchestrated motion moment** with a single reused easing token; only
   `transform`/`opacity` animated.
 - **`prefers-reduced-motion` honored** with a designed calm fallback, every time.
+- **Content visible by default.** Never hide content behind a reveal you cannot
+  guarantee. Gate the hidden start state behind `@supports (animation-timeline: view())`
+  (or a JS-added class), so unsupported browsers and no-JS loads still show everything.
 - **One memorable thing.** If nothing about the page is describable to a friend,
   it is not done.
 

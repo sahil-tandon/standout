@@ -32,6 +32,16 @@ library, so it reads as "never intentionally styled."
 **Rule:** never ship Inter/Roboto/Arial/system as the display face. Pick one
 distinctive typeface and use it decisively.
 
+**The second-order trap (category defaults).** Some "safe" faces have themselves
+become the default of a whole category, so they read as stock there even though they
+are not Inter. **Space Grotesk** and **Geist** now signal "dev tool / startup" the way
+Inter signals "AI app"; **Clash Display** and **Satoshi** are the default "modern
+startup" pair. They are fine supporting choices, but if the brief lives in that exact
+category, do not let one of them carry the display role: reach for a face with a real
+opinion (a sharp display grotesque, an unusual mono, a characterful serif) so the
+brand does not look like the category. A headline typeface should have a point of
+view even when the design is minimal.
+
 Quick replacements by register when you need a fast, safe-but-not-generic pick:
 
 | Register | Use instead of system fonts |

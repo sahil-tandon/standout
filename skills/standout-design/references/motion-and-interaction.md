@@ -73,20 +73,35 @@ Two timeline types:
 }
 ```
 
-**Reveal-on-scroll as an element enters the viewport:**
+**Reveal-on-scroll as an element enters the viewport.** Critical rule: **never hide
+content you cannot guarantee you can reveal.** Put the hidden start state ONLY inside an
+`@supports (animation-timeline: view())` block, so a browser without scroll-driven
+animation support (Firefox today, older Safari and Chromium) shows the content normally
+instead of leaving it stuck at `opacity: 0`. The same applies to JS reveals: hide via a
+class that JS adds (`.js .reveal`), so a no-JS load or a failed script stays visible.
 
 ```css
-@keyframes reveal { from { opacity: 0; transform: translateY(40px); } }
-.item {
-  animation: reveal linear both;        /* `both` so start styles apply early */
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;  /* run while entering, finish at 40% */
+/* Default: fully visible. This is what unsupported browsers and no-JS users get. */
+.item { opacity: 1; }
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes reveal { from { opacity: 0; transform: translateY(40px); } }
+    .item {
+      animation: reveal linear both;      /* `both` so start styles apply in range */
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+  }
 }
 ```
 
 Range keywords: `cover` (default, full journey through the viewport), `contain` (only
 while fully visible), `entry`, `exit`, `entry-crossing`, `exit-crossing`. Format is
-`<range-name> <offset%>`.
+`<range-name> <offset%>`. This double guard (supports + reduced-motion) is the standard
+pattern: visible by default, animated only where the technique is both supported and
+wanted. A page whose content is invisible without a feature or without JS is broken, not
+standout.
 
 **Animate one element off another's position** (the "track X, animate Y" trick) needs
 `timeline-scope` on a shared ancestor:
