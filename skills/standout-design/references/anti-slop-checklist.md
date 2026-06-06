@@ -138,3 +138,17 @@ If the work has any of these, it reads as machine-default. Replace each one.
 - **Your own repeated signature.** Even bespoke instincts become a template when
   reused every time: the mono eyebrow plus a hyper-specific spec block, or the
   one-accent-colored word in the headline, on every single page. Vary the device.
+- **The concept labeled but not seen.** Calling a product board's columns "movements"
+  while the staff lines that sold the hero are visually missing. The motif must be
+  present in pixels on the second screen, not just named in the copy.
+- **Anti-cliche that loses the mood.** Subverting the category default so hard the
+  page no longer feels like the thing (a night festival that feels like a craft fair,
+  a deep-sea film that feels like a stationery brand). Change the surface, keep the
+  emotional register.
+- **A generic body under a characterful headline.** A high-contrast display face over
+  a plain default humanist sans, so the paragraph reads as a different, stock brand.
+  The body face must share the voice.
+- **Empty interiors dressed as minimalism.** Unanchored dead quadrants, and "figure"
+  frames holding thin decorative line-art instead of real content (a portrait, a
+  legible chart). Negative space must be intentional and anchored; a figure must
+  contain something.

@@ -122,17 +122,29 @@ Even without reading the references, hold these:
   or low-contrast copy on a busy grid fails. The most important words (brand, hero
   line) must be the most legible thing on the page; if type crosses imagery, knock it
   out, plate it, or move it.
-- **The concept extends into every section, not just the hero.** The metaphor that
-  makes the hero sing must escalate, not evaporate, below the fold. The second screen,
-  usually the product, the spread, or the proof, is where you prove the idea is real;
-  carry the same motif and the same type system through it. A brilliant hero bolted to
-  a generic second screen is the most common way good work stops short of an award.
+- **The concept extends into every section and is SEEN, not just labeled.** The
+  metaphor that makes the hero sing must escalate, not evaporate, below the fold. The
+  second screen, usually the product, the spread, or the proof, is where you prove the
+  idea is real; carry the same motif AND the same type system through it. Labeling a
+  product board's columns "movements" is not enough if the staff lines that sold the
+  hero are visually absent: the motif must be present in pixels on every screen. A
+  brilliant hero bolted to a generic second screen is the most common way good work
+  stops short of an award.
+- **Subvert the category cliche, but keep the subject's emotional register.** Escaping
+  the default must not sand off what the thing actually feels like. A night electronic
+  festival can avoid neon-on-black and still feel nocturnal and electric; a deep-sea
+  film can avoid ocean-blue and still feel vast and high-pressure. If your anti-cliche
+  palette makes a festival feel like a craft fair, you overshot. Hold the mood while
+  changing the surface.
 - **Every frame holds the hero's craft, and every mark earns its place.** No section
   may drop into a flat gradient placeholder or an empty block; when you have no real
-  image asset, build a crafted placeholder (line art, duotone, generative texture, a
-  type-driven composition). Decorative ornament must be structural: if you use a
-  systemic motif (a grid, circuit traces, a diagram, staff lines) it must map to real
-  content, not wander as atmosphere. Cut dead space and lines that connect nothing.
+  image asset, build a crafted placeholder that carries real content, not thin
+  decorative line-art in a frame pretending to be a figure. A story about people needs
+  human presence (a portrait, a still); a data figure must contain legible data.
+  Decorative ornament must be structural: a systemic motif (a grid, circuit traces, a
+  diagram, staff lines) must map to real content, not wander as atmosphere. Negative
+  space must be anchored and intentional, not an empty quadrant that reads as
+  unfinished; cut dead space and lines that connect nothing.
 - **One orchestrated motion moment** with a single reused easing token; only
   `transform`/`opacity` animated.
 - **`prefers-reduced-motion` honored** with a designed calm fallback, every time.

@@ -96,6 +96,14 @@ A bold, characterful display face over a deliberately boring, hyper-legible body
 feature, not a compromise. For product/app UI, run a display cut for headings over a
 body cut for reading, the way the "Linear look" does.
 
+But "boring body" does not mean "off-brand body." The body face still has to belong to
+the same voice as the display. A high-contrast editorial serif headline over a plain
+default humanist sans reads as two different brands stitched together; the body looks
+generic and undercuts the hero. Choose a body face that shares the register (a warm
+serif or a grotesque with some character, the display family's own text cut, or a
+deliberately matched pairing) so the page reads as one designed system, not a
+characterful poster bolted to a stock paragraph.
+
 ---
 
 ## The named faces
