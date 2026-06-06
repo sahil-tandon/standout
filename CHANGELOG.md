@@ -22,6 +22,12 @@ All notable changes to this project are documented here. The format follows
   that connect nothing, no dead space), that ALL text (not just the headline) must
   clear its background, and that the designer's own tics (mono eyebrow + spec block,
   the two-tone accent word) must not become a repeated formula.
+- Third review round (iteration 4). Required the concept to be SEEN on every screen
+  (not just labeled in copy), to subvert the category cliche while keeping the
+  subject's emotional register, to give the body face the same voice as the display
+  (no generic sans under a characterful display), and to fill interiors with real
+  content: anchored negative space, and figures that hold a portrait or legible data
+  rather than thin decorative line-art.
 
 ## [v0.1.0] (2026-06-06): Initial standout-design skill
 
