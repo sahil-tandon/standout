@@ -149,8 +149,25 @@ Most flashy sites fail here, which is exactly why doing it well makes work stand
   focus states, sufficient contrast, `rem` not `px`, non-hover paths. Full playbook:
   `references/accessibility.md`.
 
-### 7. Run the anti-slop checklist before calling it done
-Verify the work escaped the generic look and hit the craft bar:
+### 7. Render it and inspect the computed result, then run the anti-slop checklist
+Do not ship on authored intent. A declaration that reads correctly in the CSS
+(`color: var(--ink)` on a button) can still render wrong because the cascade, a
+more specific parent selector, or inheritance silently overrode it. So actually look
+at the rendered page and verify the result, paying special attention to:
+- **CTA and control contrast as computed, not as written.** A button nested under a
+  `nav a` (or any element rule) can have its text color out-specified and flipped to
+  the link color, painting a light label on a light fill. Confirm the real text-vs-fill
+  contrast on every interactive element, in its default AND hover state.
+- **Edge and header clearance.** The first content must not glue itself under a fixed
+  header; give the hero top padding that clears the bar. Check nothing important kisses
+  a viewport edge or another element.
+- **The type hierarchy gap.** The wow from big display type comes from the GAP between
+  it and everything else, not from making everything big. If the lede, meta, and body
+  all ride up near the display size, the hierarchy flattens and it reads "everything is
+  loud" instead of "one dramatic headline." Keep secondary text calm so the headline
+  owns the scale.
+
+Then verify the work escaped the generic look and hit the craft bar:
 `references/anti-slop-checklist.md`.
 
 ## Non-negotiables (the short version)
