@@ -7,6 +7,18 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Changed
+- Studied a set of web-animation and 3D-graphics guides (Fireart, SVGator, an
+  Authory 3D-examples roundup, a Three.js beginner guide, Evermade, a Spline
+  tutorial, and Airbnb's Lottie). Most overlapped craft the motion and 3D
+  references already carry (Rive vs Lottie, DrawSVG/MorphSVG, scroll-sync, baked
+  lighting, kinetic type), so the additions were targeted gap-fills in
+  `references/webgl-3d-and-generative.md`: a corollary that 3D should spike a few
+  chosen moments (combined with parallax and scrollytelling) rather than run as a
+  whole-site VR layer, Womp and A-Frame added to the toolchain, and a new "Asset
+  and delivery pipeline" section (ship compressed glTF/glb via gltf-transform or
+  gltfpack with Draco/meshopt geometry and KTX2/Basis textures, clamp pixel ratio,
+  lazy-load and gate the canvas, and source models from Sketchfab/Poly Haven/
+  Quaternius/CGTrader/TurboSquid).
 - Widened the aesthetic-directions reference from a study of design catalogs
   (designprompts.dev's 30 web-native presets, a 50-style cultural survey, and 2026
   trend reporting). Kept the eight in-depth families and added: a "wider bench" table

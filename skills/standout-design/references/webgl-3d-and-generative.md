@@ -13,6 +13,7 @@ generative motifs. The goal is awe that is cheap to run and earns its weight.
 - [Rendering UI inside WebGL (the tradeoff)](#rendering-ui-inside-webgl-the-tradeoff)
 - [Fluid / liquid glass](#fluid--liquid-glass)
 - [The toolchain](#the-toolchain)
+- [Asset and delivery pipeline](#asset-and-delivery-pipeline)
 - [The render-to-FBO skeleton](#the-render-to-fbo-skeleton)
 - [Generative visuals](#generative-visuals)
 - [Generative color](#generative-color)
@@ -38,6 +39,13 @@ Two corollaries:
 - **A reactive shader beats heavy geometry.** A single high-subdivision sphere
   plus noise in the vertex shader reads as more "expensive" than an imported
   glTF with thousands of triangles, and runs faster.
+- **Deploy 3D at a few moments, not as a whole-site VR layer.** The strongest 3D
+  sites (Montfort-style flight-throughs, a single rotating hero product) use 3D to
+  spike attention at chosen beats (hero, one product reveal, one scene change) and
+  carry the rest with cheaper depth (parallax layers, scrollytelling, faux-3D
+  transforms). Continuous full-immersion reads as a tech demo and punishes old
+  hardware; the juxtaposition of one 3D moment against flat sections is what creates
+  hierarchy.
 
 ---
 
@@ -223,11 +231,35 @@ before the front. Finish with Fresnel
 | **Three.js** | The default WebGL engine | The workhorse: scene graph, loaders, materials, `EffectComposer`, `GPUComputationRenderer`. Now also a WebGPU renderer + TSL path. |
 | **R3F + drei** | React renderer + helpers | Dominant in React/Next. drei gives `<Float>`, `<MeshDistortMaterial>`, `<MeshTransmissionMaterial>`, `<Environment>`, `<ScrollControls>`, `<Instances>`, `useFBO`, `shaderMaterial`. |
 | **Babylon.js** | Full 3D engine | More game-engine; strong for configurators and WebXR; less common on pure-aesthetic sites. |
-| **Spline** | No-code 3D authoring | Designer-friendly; exports to R3F. Perf degrades on complex scenes; best for small hero objects. Export to R3F to regain shader control. |
+| **Spline** | No-code 3D authoring | Designer-friendly; exports to R3F or an embeddable component. Perf degrades on complex scenes; best for one small hero object. Export to R3F to regain shader control. |
+| **Womp** | No-code 3D, liquid/organic | Browser modeller for soft morphing blob forms; the fast path to a friendly 3D hero object without Blender. Export glb. |
+| **A-Frame** | HTML-tag 3D / WebXR | Declarative `<a-scene>` tags over Three.js; quickest entry for scene/WebXR work without JS. |
 | **curtains.js** | DOM images/videos to shader planes | You size/position planes with CSS; the lib keeps WebGL planes synced to DOM scroll/resize. |
 | **pmndrs postprocessing** | Bloom, chromatic aberration, AO | Merges effects into fewer passes; reach for N8AO and SSR for realism. |
 
 The library-to-effect map and animation stack live in `tech-stack.md`.
+
+---
+
+## Asset and delivery pipeline
+
+A 3D hero is only as good as its load. Most "3D site is slow" failures are
+shipping a raw, uncompressed model and rendering at full device pixel ratio.
+
+- **Ship glTF/`.glb`, compressed.** glTF is the web's 3D format; `.glb` is the
+  binary single-file form. Run every model through **gltf-transform** or
+  **gltfpack**: **Draco** or **meshopt** for geometry, **KTX2 / Basis** for GPU
+  texture compression. This routinely cuts a model 5 to 10x with no visible loss.
+  Bake lighting first (see above) so you can ship one unlit material.
+- **Clamp the pixel ratio.** `gl.setPixelRatio(Math.min(devicePixelRatio, 2))` (or
+  ~1.5 for heavy shaders). Retina screens otherwise render 4x the pixels for no
+  perceptible gain; this is the single biggest framerate win.
+- **Lazy-load and gate the canvas.** Mount WebGL only when in view and only above a
+  capability/connection floor; serve a baked image or video poster otherwise, and
+  never let the canvas block first paint or the reading path.
+- **Source models** from Sketchfab (CC + online editor), Poly Haven and Quaternius
+  (free, web-ready), or CGTrader / TurboSquid (marketplace) rather than modelling
+  from scratch; retopo and re-bake before shipping.
 
 ---
 
