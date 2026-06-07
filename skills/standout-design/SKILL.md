@@ -45,13 +45,22 @@ these concrete levers to make it shout:
 - **One dramatic moment on entry.** Something felt instantly: a bold load reveal that
   resolves into the page, parallax/depth, a living element, a 3D-ish tilt. Not scattered
   micro-animations, one big orchestrated beat.
-- **A single unmissable focal point.** The eye should be grabbed by one thing at once,
-  not invited to scan an even, balanced composition.
+- **A single unmissable focal point with REAL presence.** The eye must be seized by one
+  thing at once. Crucially, that focal element has to carry genuine visual weight: a
+  real photograph, a strong light source, a high-contrast object, a bold mass. A faint,
+  ghosted, low-contrast shape on an empty field is NOT a focal point; it reads as dead
+  space, and beautiful typography alone cannot carry an otherwise empty hero.
+- **Restraint must strike, even on calm and luxury briefs.** "Dramatically spare" means
+  extreme negative space around one object that has real presence (a gorgeous photo, a
+  single high-contrast form, a genuine light-flooded scene), not a beige void with a
+  whisper of a shape. If you go minimal, the one element you keep must hit hard. Quiet
+  and competent is the most common way to miss the wow.
 - **Intensity matched to the brief, undiluted.** Food should look abundant and
-  mouth-watering; a festival loud; luxury dramatically spare (extreme negative space
-  around one perfect object), never a timid middle.
+  mouth-watering; a festival loud; luxury dramatically spare around one striking object;
+  never a timid middle.
 Self-check: would this stop a scroll? If it is merely pleasant, scale the focal element
-up, go more immersive, push the color and light, and add the one dramatic entry moment.
+up, give it real contrast and presence (or a real photo), go more immersive, push the
+color and light, and add the one dramatic entry moment.
 
 Produce working code (HTML/CSS/JS, React, Vue, whatever fits). Aesthetics and
 function both matter: a beautiful page that is slow, broken, or inaccessible is not
@@ -169,7 +178,10 @@ Even without reading the references, hold these:
   lines, textures) OUT of any text's bounding box; a wire running through a descender
   or low-contrast copy on a busy grid fails. The most important words (brand, hero
   line) must be the most legible thing on the page; if type crosses imagery, knock it
-  out, plate it, or move it.
+  out, plate it, or move it. **Pay special attention to CTAs and key interactive
+  elements:** a primary button must have strong contrast and fully-contained text,
+  never accent-on-accent (e.g. amber text on an amber fill) or label text clipped at
+  the pill edge. One low-contrast or clipped CTA punctures an otherwise premium page.
 - **The concept extends into every section and is SEEN, not just labeled.** The
   metaphor that makes the hero sing must escalate, not evaporate, below the fold. The
   second screen, usually the product, the spread, or the proof, is where you prove the
