@@ -149,11 +149,15 @@ Most flashy sites fail here, which is exactly why doing it well makes work stand
   focus states, sufficient contrast, `rem` not `px`, non-hover paths. Full playbook:
   `references/accessibility.md`.
 
-### 7. Render it and inspect the computed result, then run the anti-slop checklist
-Do not ship on authored intent. A declaration that reads correctly in the CSS
-(`color: var(--ink)` on a button) can still render wrong because the cascade, a
-more specific parent selector, or inheritance silently overrode it. So actually look
-at the rendered page and verify the result, paying special attention to:
+### 7. Open it in a real browser and inspect before calling it done (mandatory)
+Never mark the work done from the code alone. Always load the built page in a real
+browser (Chrome, via the browser tools when available) and look at it before claiming
+it is finished. If you cannot open a browser, say so explicitly rather than implying it
+was checked. Do not ship on authored intent: a declaration that reads correctly in the
+CSS (`color: var(--ink)` on a button) can still render wrong because the cascade, a
+more specific parent selector, or inheritance silently overrode it. Render at a real
+desktop width and at a mobile width, and apply the fixes you find before finishing,
+paying special attention to:
 - **CTA and control contrast as computed, not as written.** A button nested under a
   `nav a` (or any element rule) can have its text color out-specified and flipped to
   the link color, painting a light label on a light fill. Confirm the real text-vs-fill
@@ -228,6 +232,12 @@ Even without reading the references, hold these:
 - **Content visible by default.** Never hide content behind a reveal you cannot
   guarantee. Gate the hidden start state behind `@supports (animation-timeline: view())`
   (or a JS-added class), so unsupported browsers and no-JS loads still show everything.
+- **Browser-verified before done.** Always open the built page in a real browser
+  (Chrome, via the browser tools) and visually inspect it at desktop and mobile widths
+  before marking the work complete. Catch the defects that only show when rendered
+  (out-specified CTA contrast, content kissing a fixed header, a flattened type
+  hierarchy) and fix them first. If no browser is available, say so plainly; never
+  imply a visual check that did not happen.
 - **The wow test (the highest bar).** Picture a stranger landing on this for the first
   time. Do they involuntarily go "wow, that's a great-looking site" within a second,
   and remember it afterward? If the honest answer is "it's clean and competent" or
