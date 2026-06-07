@@ -104,6 +104,14 @@ Type, color, and layout carry most of the impression.
   See `references/color-and-atmosphere.md`.
 - **Layout**: use an intentional grid with at least one breakout or asymmetry, not a
   stack of equal centered cards. See `references/layout-and-composition.md`.
+- **Imagery**: match the technique to the subject. Where the subject's beauty or
+  texture IS the appeal (food, products, fashion, people, nature), use real
+  photography or photoreal 3D / AI imagery, never a flat hand-coded vector drawing,
+  which caps the wow no matter how clever. Reserve hand-coded SVG/CSS illustration for
+  deliberately stylized looks (line art, geometric, retro, diagrammatic, brand marks).
+  When you do illustrate, make it high-fidelity with SVG filters (texture, lighting,
+  sheen) and layered light, not flat fills. Full guide:
+  `references/imagery-and-illustration.md`.
 
 ### 3. Add motion and interaction
 Motion is where standout sites separate from competent ones, but it must be
@@ -225,6 +233,7 @@ Read the file relevant to the step you are on; do not load all of them upfront.
 | `references/typography.md` | Step 2, picking and setting type; named faces and foundries. |
 | `references/color-and-atmosphere.md` | Step 2, palette, OKLCH theming, grain/gradient/glass. |
 | `references/layout-and-composition.md` | Step 2, grids, breakout, bento, scroll architecture. |
+| `references/imagery-and-illustration.md` | Step 2, choosing imagery (photo vs 3D vs AI vs SVG) and making illustration high-fidelity. |
 | `references/motion-and-interaction.md` | Step 3, scroll, transitions, cursors, easing, kinetic type, Rive vs Lottie. |
 | `references/webgl-3d-and-generative.md` | Step 4, when 3D/shaders/generative earn their place. |
 | `references/app-and-product-ui.md` | Step 5, app/dashboard/product UI work. |

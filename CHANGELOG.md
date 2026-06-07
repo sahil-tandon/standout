@@ -28,6 +28,16 @@ All notable changes to this project are documented here. The format follows
   (no generic sans under a characterful display), and to fill interiors with real
   content: anchored negative space, and figures that hold a portrait or legible data
   rather than thin decorative line-art.
+- Made the WOW the primary success bar (immediate visceral "great-looking site" on
+  sight, any genre), added concrete levers to manufacture it (dramatic scale,
+  immersion over the safe split, color/light intensity, one dramatic entry moment),
+  and corrected the over-correction toward anti-cliche novelty (beat the lazy default,
+  not the genre; keep the subject's emotional register).
+- Added an imagery and illustration guide (`references/imagery-and-illustration.md`)
+  and the rule to match imagery technique to subject: use photography, photoreal 3D, or
+  AI imagery where the subject's texture is the appeal (food, products, fashion), and
+  reserve hand-coded SVG/CSS for stylized looks, made high-fidelity with SVG filters
+  and layered light rather than flat fills.
 
 ## [v0.1.0] (2026-06-06): Initial standout-design skill
 
