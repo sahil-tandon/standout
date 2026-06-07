@@ -7,6 +7,19 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Changed
+- Widened the aesthetic-directions reference from a study of design catalogs
+  (designprompts.dev's 30 web-native presets, a 50-style cultural survey, and 2026
+  trend reporting). Kept the eight in-depth families and added: a "wider bench" table
+  of 23 named web aesthetics (monochrome editorial, newsprint, Bauhaus, Art Deco,
+  flat, Material, neumorphism, claymorphism, glassmorphism, neo-brutalism, bold-type
+  poster, kinetic, academia, cyberpunk, vaporwave, web3, botanical, sketch, playful
+  geometric, retro 90s, cinematic dark SaaS, electric tech, industrial skeuomorphism)
+  each with its signature, mode/type, and fit; a "cultural well" of historical and
+  subcultural styles to mine for repositioning; and a "current currents (2026)" note
+  (nostalgia-as-comfort, glassmorphism/liquid-glass return, emotionally-aware and
+  time-of-day modes, multimodal/intent-led, machine experience, and the
+  AI-templating-regresses-to-slop caution). SKILL.md step 1 now tells the model to
+  scan the wider bench instead of defaulting to the same handful.
 - Second round on the Umbrella Burger test (independent re-review: wow 5.5 to 7, craft
   8 to 8.5). Added the lever to compose ONE lit scene rather than a product cutout
   politely beside the type (bleed off-frame, overlap the headline, give light a

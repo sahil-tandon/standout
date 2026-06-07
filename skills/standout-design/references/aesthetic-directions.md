@@ -138,6 +138,99 @@ vocabulary, not in effects. The craft is in density done legibly.
 
 ---
 
+## The wider bench: named web aesthetics to pull from
+
+The eight above are the families you will reach for most, detailed because they
+recur. They are not the whole menu. Below is a broader bench of named, web-native
+directions. Most are a specific reading of one of the eight families (Neo-brutalism
+is one cut of expressive, Claymorphism one cut of playful), but naming them widens
+the menu so you stop defaulting to the same handful. The commit rule still holds:
+pick ONE and push it to its edge. Look a direction up before using it; translate its
+real-world motifs into web type, color, depth, and motion rather than pasting a
+texture.
+
+| Direction | Signature | Mode / type | Fits |
+|-----------|-----------|-------------|------|
+| **Monochrome editorial** | Pure black/white, zero accent, oversized serif, dramatic contrast | light / serif | Fashion, architecture, portfolios |
+| **Newsprint** | High-contrast B/W, tight grids, rule lines, masthead energy | light / serif | Journalism, essays, archives |
+| **Bauhaus** | Primary R/B/Y, circle/square/triangle, black borders, hard shadow, constructivist asymmetry | light / sans | Culture, art, education |
+| **Art Deco** | Gatsby geometry, metallic gold, sunbursts, architectural symmetry | dark / serif | Luxury heritage, hospitality, events |
+| **Flat design** | No depth cues, pure color blocking, crisp geometric 2D | light / sans | Marketing, illustration-led apps |
+| **Material (MD3)** | Elevation states, dynamic color extraction, pill buttons, tactile depth | light / sans | Android-aligned and consumer apps |
+| **Neumorphism** | Extruded/inset dual-shadow elements on one monochrome ground, soft tactile | light / sans | Controls, audio, calm utilities (watch contrast) |
+| **Claymorphism** | Inflatable 3D clay, stacked soft shadows, candy color, floating ambient blobs | light / sans | Playful consumer, kids, friendly fintech |
+| **Glassmorphism / liquid glass** | Frosted translucent panels, blur, layered depth, tint glowing behind | either / sans | Spatial UI, overlays, premium dashboards |
+| **Neo-brutalism** | Cream ground, 4px black borders, hard zero-blur offset shadows, clashing brights, sticker layering | light / sans | Indie, dev tools, bold brands |
+| **Bold typography / poster** | Type IS the image, ultra-large headline, extreme negative space | dark / sans | Statements, agencies, launches |
+| **Kinetic** | Motion-first, marquees, viewport-scaled text, scroll-triggered uppercase | dark / sans | Music, fashion drops, events |
+| **Academia** | Old-library warmth, paper texture, traditional serif, gold/crimson | dark or light / serif | Education, publishing, archives |
+| **Cyberpunk** | Neon-on-black, glitch, mono, HUD decoration, dystopian 80s sci-fi | dark / mono | Gaming, AI, edgy tech |
+| **Vaporwave / synthwave** | Neon pink/cyan on void purple, grid horizon, CRT scanlines, surreal sunset | dark / mono | Music, retro-digital, nostalgia |
+| **Web3 / crypto** | Deep void, one token-color accent (BTC orange), glow, data-viz precision | dark / sans | Crypto, finance-tech, data products |
+| **Botanical / organic serif** | Earthy muted tones, paper grain, rounded organic shapes, warm serif | light / serif | Wellness, food, craft, beauty |
+| **Sketch / hand-drawn** | Wobbly borders, handwritten type, paper texture, marker imperfection | light / sans | Education, kids, friendly SaaS |
+| **Playful geometric (Memphis)** | Bright solids, primitive shapes and squiggles, stable grid plus whimsy | light / sans | Consumer, community, events |
+| **Retro 90s / Win95** | Beveled system UI, system fonts, primary color, marquees, ugly-cool chaos | light / sans | Nostalgia, indie, irony-aware brands |
+| **Cinematic dark SaaS** | Layered ambient gradient blobs, mouse-spotlight, premium-software micro-interactions | dark / sans | SaaS, AI, dev products |
+| **Electric tech** | Electric-blue gradients, display-serif plus grotesque pairing, animated hero, inverted sections | light / sans | Startups, B2B, product |
+| **Industrial skeuomorphism** | Copper, cogs, screws/vents/LEDs, realistic hardware lighting (Teenage Engineering, Rams) | light / sans | Hardware, audio, maker brands |
+
+---
+
+## The cultural well: styles to mine for a specific world
+
+When a brief wants a distinctive world (especially for repositioning a category the
+default renders cold or generic), pull from the broader history of visual culture,
+not just web trends. These are not web-ready presets; name the one that fits, study
+its real motifs, then translate them into type, color, depth, texture, and motion. A
+sampler, grouped so you can find a register fast:
+
+- **Ornate / historical:** Neoclassical, Baroque, Rococo, Victorian, Gothic
+  (blackletter), Art Nouveau, Filigree, Acanthus.
+- **Retro-digital:** Y2K (chrome, iridescence), Synthwave, Vaporwave, Cybercore,
+  Pixel art, Frutiger Aero (aqua gloss).
+- **Cozy / craft:** Japandi, Cottagecore/Farmhouse, Shabby chic, Scrapbook,
+  Wabi-sabi, Light and Dark Academia.
+- **Bold-graphic:** Memphis, Pop art (Ben-Day dots), Brutalism, Neo-brutalism,
+  Graffiti, Modular typography.
+- **Soft / dreamy:** Aurora (iridescent gradients), Ethereal, Glassmorphism, Kawaii,
+  Coquette (ribbons, pearls).
+- **Earthy / regional:** Bohemian, Southwest/Wild West, Mystical Western, Nautical,
+  Organic/Wabi-sabi.
+- **Art-historical technique:** Tenebrism (chiaroscuro spotlight), Pointillism,
+  Surrealism, Mixed-media collage, Conceptual sketch.
+- **Themed worlds:** Steampunk, Kitsch, Anthropomorphic (objects with faces), Rebus
+  (visual puns), Luxury foil typography.
+
+The move that pays off most: take a subject the category renders cold (robotics,
+finance, machining, therapy) and run it in a warm, saturated, or handcrafted register
+from this well. The aesthetic carries the repositioning more than the copy does.
+
+---
+
+## Current currents (2026)
+
+Treat these as live vocabulary, not a mandate; pull only what serves the concept.
+
+- **Nostalgia as comfort.** Against fast AI-driven change, familiar patterns and
+  retro registers (Y2K, 90s, analog) read as reassuring and human. Familiarity is a
+  feature, used on purpose.
+- **Glassmorphism / liquid glass return.** Now cheap to render and aimed at spatial,
+  layered, depth-aware UI (Apple's Liquid Glass). Good for overlays and chrome over
+  rich backgrounds; keep text on an opaque plate so contrast survives the blur.
+- **Emotionally-aware and time-of-day modes.** Interfaces that shift tone, pacing,
+  and palette by context (morning vs midnight, focused vs browsing). A low-cost way
+  to feel authored and alive, if the shift is real, not decorative.
+- **Multimodal and intent-led.** Voice, gesture, and vision alongside the screen, and
+  flows that respond to what the user is trying to do rather than a fixed path.
+- **Machine experience (MX).** Semantic, well-structured markup so AI agents can read
+  and represent the page; increasingly part of being found at all.
+- **The regression to watch.** AI-extracted or templated design systems built without
+  a concept regress straight to slop. Speed without a strong idea is the new generic.
+  The concept-first discipline in this skill is the guard against it.
+
+---
+
 ## Choosing and committing
 
 - Read the brief for its most extreme honest interpretation, then pick the direction

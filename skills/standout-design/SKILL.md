@@ -97,7 +97,12 @@ both win; timid middle-ground does not. Do not default to a look, choose one.
 - Ask (or infer): what problem does this solve, who is it for, what is the one
   memorable idea, what tone fits.
 - Pick a direction (brutalist, editorial/Swiss, cinematic 3D, retro-technical,
-  organic, luxury, playful, industrial, ...). See `references/aesthetic-directions.md`.
+  organic, luxury, playful, industrial, ...). Those are the common eight; the
+  reference also carries a wider bench of named web aesthetics (neo-brutalism,
+  claymorphism, glassmorphism, kinetic, vaporwave, academia, electric tech, ...) and
+  a cultural well (Bauhaus, Art Deco, Y2K, Memphis, wabi-sabi, ...) to escape the
+  default few. Scan it; do not keep reaching for the same handful. See
+  `references/aesthetic-directions.md`.
 - Vary across projects. Never converge on the same fonts, palette, or layout every
   time. Alternate light/dark, serif/grotesque, calm/loud.
 - **Derive the page's ARCHITECTURE from the artifact, not from a default skeleton.**
