@@ -39,6 +39,15 @@ these concrete levers to make it shout:
   right layout; it is the safe default and rarely wows. Go full-bleed and immersive:
   let the subject bleed off edges, sit center stage, or wrap the type. Kill empty
   quadrants. The hero should feel like a scene or a poster, not a slide.
+- **Compose ONE lit scene, not a product cutout politely beside the type.** Even a
+  large, well-masked subject floating in a soft radial glow next to the headline still
+  reads as "type zone + product zone coexisting," which is louder but not jolting. To
+  make it one charged image: bleed the subject off the frame edge, overlap it onto the
+  headline (let them occupy the same space), give the light a DIRECTION (a hot side and
+  a falloff, not an even centered halo), and ground the subject with a contact shadow or
+  steam/reflection so it inhabits the scene instead of hovering in a vignette. The test:
+  could you crop a strip from anywhere across the hero and still have one image, or does
+  it fall into two tidy halves?
 - **Color and light intensity.** Push saturation and contrast; add a real light source
   (a glow, a spotlight, a deep gradient with dimension) so the page feels like a place,
   not a flat tint. Atmosphere with depth.
@@ -64,7 +73,10 @@ these concrete levers to make it shout:
   onto a small pale plate floated beside the headline, and do not let a cool or muted
   brand palette drain the warmth out of the one element that creates hunger or want. A
   beautifully art-directed page where the food is small and washed out has buried its
-  own strongest asset.
+  own strongest asset. And make the hero subject read as one irresistible thing FIRST:
+  a clever split/compare/exploded treatment with labels can register as a diagram ("two
+  products") before it registers as delicious, which dampens craving. Lead with desire,
+  let the cleverness be the second read (or move it past the hero).
 Self-check: would this stop a scroll? If it is merely pleasant, scale the focal element
 up, give it real contrast and presence (or a real photo), go more immersive, push the
 color and light, and add the one dramatic entry moment.
@@ -195,6 +207,9 @@ paying special attention to:
   stacking), the hero sits in roughly one viewport, and nothing important (a key image,
   a CTA) runs off the bottom or the side. Size type to the space it actually has; widen
   the column or shrink the companion element rather than letting the headline overrun.
+  On mobile specifically: when the hero stacks, a lead image must not eat the whole
+  first screen and push the headline and brand line below the fold. Shrink the image, or
+  overlap the headline onto it, so the core message is visible without scrolling.
 
 Then verify the work escaped the generic look and hit the craft bar:
 `references/anti-slop-checklist.md`.

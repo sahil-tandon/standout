@@ -7,6 +7,14 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Changed
+- Second round on the Umbrella Burger test (independent re-review: wow 5.5 to 7, craft
+  8 to 8.5). Added the lever to compose ONE lit scene rather than a product cutout
+  politely beside the type (bleed off-frame, overlap the headline, give light a
+  direction, ground with a contact shadow, so a vertical crop anywhere still reads as
+  one image), the caution that a hero subject must read as one irresistible thing before
+  any clever split/compare/exploded treatment registers as a diagram, and the mobile
+  rule that a stacked hero's lead image must not push the headline and brand line below
+  the fold.
 - Hardened from a real-brand redesign test (Umbrella Burger). Added: when the imagery
   IS the desire (food, product, skin, fabric) it must dominate the hero, large, warm,
   and high-contrast, never shrunk onto a small pale plate beside the headline or drained
