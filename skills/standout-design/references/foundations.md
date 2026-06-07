@@ -182,6 +182,26 @@ that fit the brief; do not stack them all.
   pull) makes a site feel authored, more than ten generic scattered effects.
 - **Treat dead time as a designed beat.** A loading or empty state is a brand moment,
   not a spinner.
+- **Reposition via aesthetic (de-clinicalize, de-stiffen).** When a subject is one the
+  category renders cold, clinical, technical, or boring (robotics, machining, therapy,
+  finance, infrastructure), give it warm, saturated, playful, handcrafted, or natural
+  visual language instead. The look carries the repositioning more than the copy does.
+- **Diegetic title and UI.** Render the title or key info as a real object inside the
+  world: a license plate, a product spec badge, a stamp, a ticket, a painted sign. The
+  interface becomes part of the depicted scene, not a label floating over it.
+- **The color-field hero.** A full-bleed single saturated color with soft diagonal
+  light bands plus grain and one elegant type statement, no product shot. Confident,
+  low-asset, high-impact when the brand voice can carry it.
+- **The food / playful hero recipe.** One bold color field, a cut-out real photo (or
+  rich illustration) overlapping oversized display type, and a scattered hand-drawn
+  doodle vocabulary of small outline icons. Warm, appetizing, energetic.
+- **Strip the furniture when the experience is the message.** Remove the nav bar and
+  scroll and make a single immersive screen (a title screen, a game start).
+- **Illustration as the brand, matched to intent.** For creative studios, kids,
+  playful, or handmade brands, a rich illustration (isometric, flat-vector, hand-drawn)
+  is the right hero and the style is the proof, so make it rich and characterful, not
+  flat-diagrammatic. (For food and products, real photography or photoreal 3D still
+  wins; see `imagery-and-illustration.md`.)
 
 ---
 
