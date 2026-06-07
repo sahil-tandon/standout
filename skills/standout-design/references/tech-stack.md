@@ -9,6 +9,7 @@ scroll-driven jank.
 - [The library-to-effect map](#the-library-to-effect-map)
 - [Notes on the key choices](#notes-on-the-key-choices)
 - [GSAP is now fully free](#gsap-is-now-fully-free)
+- [Recent native CSS worth reaching for](#recent-native-css-worth-reaching-for)
 - [Frameworks behind great sites](#frameworks-behind-great-sites)
 - [The Lenis + GSAP single-rAF sync](#the-lenis--gsap-single-raf-sync)
 
@@ -104,6 +105,39 @@ reveal-from-mask), `autoSplit: true` (re-splits on `document.fonts` load and on
 resize via ResizeObserver, fixing the "split before the webfont loaded" bug),
 `onSplit(self)` (your reveal survives responsive re-splitting), and built-in a11y
 (`aria-label` on the container, `aria-hidden` on generated spans).
+
+---
+
+## Recent native CSS worth reaching for
+
+Several effects that used to need JS or extra DOM are now native CSS. Lean on these
+first (less code, off-main-thread, fewer dependencies), then progressive-enhance for
+browsers that lack them. They are also distinctive: most generated output never uses
+them, so they read as authored.
+
+- **`corner-shape`** (with `border-radius`): non-round corners natively, `bevel`,
+  `scoop`, `notch`, and superellipse `squircle`. Ticket-stub cards, angled tabs,
+  Apple-style squircles without an SVG mask. Newer Chromium; enhance over plain
+  radius.
+- **Gap decorations** (`column-rule` / `row-rule` extended to flex and grid gaps,
+  the CSS Gaps module, Chrome 149+): draw divider rules inside grid/flex gutters with
+  no extra elements. Editorial column rules and bento dividers for free.
+- **Anchor positioning** (`anchor-name`, `position-anchor`, `position-area`,
+  `@position-try`): tether tooltips, menus, and popovers to an anchor in pure CSS,
+  no JS positioning library, and it flips automatically when it would overflow.
+  Pairs with the top-layer `popover` attribute. Shipped in Chromium; enhancing.
+- **`shape-outside` with `shape()` / `path()` / `xywh()` / `rect()`**: wrap text
+  around real curves and arbitrary shapes, the fastest way to make a layout stop
+  looking like stacked boxes. Pair with `clip-path` for matching cut images.
+- **CSS-only charts**: `conic-gradient` plus `@property`-typed custom properties give
+  animatable, semantic pie/donut/gauge visuals with zero JS. Right for small data
+  flourishes; reach for a lib only at real complexity.
+- **Native text reveals**: animate `letter-spacing` or `clip-path` for headline
+  reveals, and style `::first-line` / `::first-letter` (and the proposed
+  `::first-word`) for editorial drop-caps and lead-ins without wrapping every word in
+  a span.
+- **`image-rendering: crisp-edges`** (now broadly baseline): keep pixel art, QR
+  codes, and tiny icons sharp when scaled instead of letting the browser blur them.
 
 ---
 

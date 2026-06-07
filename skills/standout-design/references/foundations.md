@@ -157,6 +157,15 @@ that fit the brief; do not stack them all.
 - **Copy is part of the design system.** A short, voice-heavy line or a recurring
   refrain (a repeated tagline across sections) carries tone and welds a multi-section
   page into one voice more cheaply than any visual token. Write the voice, then design.
+- **Make the interaction embody the product.** The marketing site should behave like
+  the thing it sells: a presentation tool's page animates like a deck, a 3D tool's
+  hero is manipulable 3D, a customizer lets you customize right in the hero, a motion
+  product moves. When the medium demonstrates the message, the page becomes live proof
+  instead of description, and the interaction is on-concept by construction.
+- **Demonstrate the one benefit in the hero, do not describe it.** Show the product
+  doing its single most important thing (a day-to-night video that proves an adaptive
+  screen, a before/after wipe, a live data readout) so the value lands before the
+  visitor reads a word. Showing beats a headline claim.
 - **Reframe the user's main objection into the headline.** Lead with the line that
   neutralizes the decision-maker's biggest fear ("turn screen time into learning
   time"). The headline does sales work, not just description.

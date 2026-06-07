@@ -7,6 +7,17 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Changed
+- Studied a batch of web-design inspiration and creativity sources (AddSearch,
+  Awwwards, Webflow, Format, Eleken, Kota, MuffinGroup, CSS-Tricks, plus several
+  listicles). Most repeated craft the skill already carries; the additive yield was
+  narrow and specific. Added to `references/tech-stack.md` a "Recent native CSS worth
+  reaching for" section (corner-shape, gap decorations, anchor positioning,
+  shape-outside with shape()/path(), CSS-only conic-gradient charts, native text
+  reveals via letter-spacing and ::first-line/::first-letter, image-rendering:
+  crisp-edges), since these reduce JS and rarely show up in generated output. Added
+  two principles to foundations' "moves worth stealing": make the interaction embody
+  the product (the marketing site behaves like the thing it sells) and demonstrate
+  the one benefit in the hero rather than describing it.
 - Studied a set of web-animation and 3D-graphics guides (Fireart, SVGator, an
   Authory 3D-examples roundup, a Three.js beginner guide, Evermade, a Spline
   tutorial, and Airbnb's Lottie). Most overlapped craft the motion and 3D
