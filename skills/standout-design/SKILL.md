@@ -18,6 +18,16 @@ while staying fast and accessible. The enemy is the generic AI look: Inter on wh
 purple gradients, three evenly-spaced rounded cards, predictable layouts, timid
 motion. This skill replaces that default with committed art direction and real craft.
 
+**The bar is an immediate, visceral WOW.** The real target is the involuntary reaction
+a visitor has in the first second: "that's a great-looking site," followed by a lasting
+impression they remember later. That is the success criterion above all others. It is
+not about being clever, ownable, or anti-cliche for its own sake; a page can be
+conceptually smart and still leave you cold. Aim every build at that gut-level wow, in
+whatever genre fits the brief, a bold maximal poster, a hushed luxury page, a kinetic
+festival, an editorial spread. Restraint is allowed, but restraint must still be
+STRIKING; "tasteful and competent but quiet" is a miss. If a stranger would not stop
+and go "wow" on sight, it is not done yet. Wow first, then make it ownable and correct.
+
 Produce working code (HTML/CSS/JS, React, Vue, whatever fits). Aesthetics and
 function both matter: a beautiful page that is slow, broken, or inaccessible is not
 standout, it is a liability.
@@ -156,8 +166,13 @@ Even without reading the references, hold these:
 - **Content visible by default.** Never hide content behind a reveal you cannot
   guarantee. Gate the hidden start state behind `@supports (animation-timeline: view())`
   (or a JS-added class), so unsupported browsers and no-JS loads still show everything.
-- **One memorable thing.** If nothing about the page is describable to a friend,
-  it is not done.
+- **The wow test (the highest bar).** Picture a stranger landing on this for the first
+  time. Do they involuntarily go "wow, that's a great-looking site" within a second,
+  and remember it afterward? If the honest answer is "it's clean and competent" or
+  "it's a clever idea but visually quiet," it is not done. Push the focal moment,
+  the scale, the color, the motion, the one striking element, until the first
+  impression lands as awe, not approval. This applies to every genre, restraint
+  included: a minimal page must be arrestingly minimal, not merely tidy.
 
 ## Starter snippets
 

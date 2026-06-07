@@ -77,8 +77,12 @@ tells to avoid.
 - [ ] Type, color, motion, and copy speak one voice.
 - [ ] Spacing, type, and motion run on scales/tokens, not magic numbers.
 
-**The remember test**
-- [ ] Is there one thing a visitor will describe to a friend? If not, it is not done.
+**The wow test (the highest bar)**
+- [ ] Would a stranger involuntarily go "wow, that's a great-looking site" within a
+      second of landing, and remember it later? "Clean and competent" or "clever but
+      visually quiet" is a miss. Push the focal moment until the first impression is
+      awe, not approval. (Applies to every genre; a minimal page must be arrestingly
+      minimal, not merely tidy.)
 
 ---
 

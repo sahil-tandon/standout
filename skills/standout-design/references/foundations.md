@@ -20,6 +20,14 @@ use the canon rules to keep it coherent while you build it.
 What separates great from merely competent. These hold regardless of aesthetic
 direction.
 
+**The outcome these serve is a wow on sight.** Everything below is in service of one
+gut-level result: a first-time visitor involuntarily reacts "that's a great-looking
+site" within a second, and remembers it later. Judge the work by that reaction, not by
+how clever or how restrained it is. Spectacle can deliver it (a bold poster hero, a
+kinetic title, a striking color field) and so can restraint (an arrestingly spare
+editorial page) but "tasteful and competent" without that jolt is a miss. When in
+doubt, push the focal moment harder until the first impression is awe, not approval.
+
 1. **One strong concept.** The most memorable interfaces are built around a single
    legible idea that everything serves: a metaphor, a world, a story. It should be
    readable in the first three seconds. Decoration without a concept reads as
@@ -163,4 +171,5 @@ Run this before calling any frontend done.
       semantic DOM behind any canvas; non-hover paths exist.
 - [ ] **Cohesion:** type, color, motion, and copy speak one voice; spacing, type, and
       motion run on scales and tokens.
-- [ ] **The remember test:** is there one thing a visitor will describe to a friend?
+- [ ] **The wow test:** would a stranger go "wow, that's a great-looking site" on
+      sight and remember it later? Approval is not enough; aim for the involuntary jolt.
