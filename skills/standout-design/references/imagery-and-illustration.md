@@ -266,6 +266,38 @@ The same trap as everywhere else in this skill, craft pooling in the safe places
 the hero stays quiet, just wearing a different costume: here the chrome and props get
 all the texture while the main surface stays flat. Texture the hero first.
 
+### Light the scene: the bigger lever, and the CSS ceiling
+
+Texture makes a material believable; **light** is what makes it *wow*. Once the surface
+reads as the right material, the jump from "nice themed page" to "stop and stare" comes
+from lighting it like a photograph, not from more grain:
+
+- **Put a real, directional light on the hero surface itself, not just the frame.** A
+  warm hotspot off-center with genuine falloff *across the object* (bright near the
+  source, dropping toward the far edges) reads as "lit by a lamp." A surface that stays
+  evenly bright corner to corner reads as a flat scan, no matter how textured. The
+  light has to land on the thing, not just the table around it.
+- **Compose the whole frame as chiaroscuro: one lit hero, everything else in shadow.**
+  The hero must be the single brightest object; sink the surrounding chrome and panels
+  into warm shadow so the eye is forced to it. If the chrome is as bright as the hero,
+  there is no focal drama. Watch the inverse failure too: an even, flat dark wash over
+  everything reads as "dimmed UI," not "lamplight." The shadow must be *warm and
+  textured* (wood grain, a rim of light, a falloff gradient), and the light must have a
+  visible source (a bloom/halo where the lamp is), or darkness just looks like low
+  brightness. In product UI, balance this against legibility: dim the chrome, do not
+  black it out.
+- **Know the ceiling of hand-coded material realism.** Pure CSS/SVG can take a
+  physical-material pastiche a long way (layered grain, litho mis-registration,
+  debossed print, printer's marks, directional shadows, a lamp gradient) but it plateaus
+  short of photoreal: paper fibre catching raking light, a real lamp caustic on a curved
+  card, dust in the beam, true depth of field are things CSS only fakes. When the brief
+  genuinely demands that last mile, the move is a **baked photoreal hero plate** (a 3D
+  render or a photograph of the object, lit for real) composited behind a live CSS/SVG
+  interactive overlay, not another pass of gradients. And a dramatic lit *hero shot*
+  reaches that bar more easily than a fully-usable UI, because deep chiaroscuro fights
+  the legibility a working interface needs. Decide which one the brief actually wants
+  before chasing the last point of polish in the wrong medium.
+
 ---
 
 ## Making hand-coded illustration high-fidelity

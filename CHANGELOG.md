@@ -7,6 +7,17 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Changed
+- Pushed the same Scotland Yard board UI further (eight versions, eight rounds of
+  independent visual critique, wow 6.5 to ~8.5, craft 7 to ~8.5) to find the ceiling.
+  Added a "Light the scene" subsection to the material-pastiche guidance: once a
+  surface reads as the right material, LIGHT is the bigger wow lever than more texture,
+  put a directional light with real falloff on the hero surface itself (not just the
+  frame), compose the whole frame as chiaroscuro (one lit hero, chrome sunk into WARM
+  TEXTURED shadow with a visible light source, not a flat dark wash that reads as
+  "dimmed UI"), and know the ceiling: pure CSS/SVG plateaus short of photoreal material
+  realism, so the last mile to a stop-and-stare result wants a baked photoreal/3D hero
+  plate behind a live CSS overlay, and a dramatic hero shot hits that bar more easily
+  than a fully-usable UI (deep chiaroscuro fights interface legibility).
 - Hardened from a real build test (an online Scotland Yard board-game UI in a
   "retro board-game craft" direction, four rounds of independent visual critique:
   wow 6.5 to 7.5, craft 7 to 8). Added a "material pastiche" section to
