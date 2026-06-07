@@ -58,6 +58,13 @@ these concrete levers to make it shout:
 - **Intensity matched to the brief, undiluted.** Food should look abundant and
   mouth-watering; a festival loud; luxury dramatically spare around one striking object;
   never a timid middle.
+- **When the imagery IS the desire (food, product, skin, fabric), let it dominate and
+  stay warm.** The appetite subject must be the biggest, warmest, highest-contrast thing
+  in the hero, bleeding large and lit to look crave-worthy. Do not shrink the real photo
+  onto a small pale plate floated beside the headline, and do not let a cool or muted
+  brand palette drain the warmth out of the one element that creates hunger or want. A
+  beautifully art-directed page where the food is small and washed out has buried its
+  own strongest asset.
 Self-check: would this stop a scroll? If it is merely pleasant, scale the focal element
 up, give it real contrast and presence (or a real photo), go more immersive, push the
 color and light, and add the one dramatic entry moment.
@@ -165,6 +172,17 @@ paying special attention to:
 - **Edge and header clearance.** The first content must not glue itself under a fixed
   header; give the hero top padding that clears the bar. Check nothing important kisses
   a viewport edge or another element.
+- **A fixed or overlapping header must adapt to what scrolls behind it.** A header with
+  one fixed background (say a light/cream bar with dark text and a dark logo) looks like
+  a stray bar parked on top once a dark section scrolls under it, and the logo or links
+  can lose contrast. Scroll the whole page and confirm the header reads correctly over
+  EVERY section: give it a scroll/section-aware theme swap (light-glass over light,
+  dark-glass over dark) or a treatment that genuinely works over both. Same for any
+  logo, which may need a light and a dark variant.
+- **Mobile navigation must stay reachable.** Do not collapse the nav by simply hiding
+  the links below a breakpoint with no replacement; that strands Menu, About, and the
+  rest on phones. If the links do not fit, provide a real menu affordance (a working
+  hamburger/disclosure) so every destination is reachable on mobile.
 - **The type hierarchy gap.** The wow from big display type comes from the GAP between
   it and everything else, not from making everything big. If the lede, meta, and body
   all ride up near the display size, the hierarchy flattens and it reads "everything is

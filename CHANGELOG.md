@@ -7,6 +7,16 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Changed
+- Hardened from a real-brand redesign test (Umbrella Burger). Added: when the imagery
+  IS the desire (food, product, skin, fabric) it must dominate the hero, large, warm,
+  and high-contrast, never shrunk onto a small pale plate beside the headline or drained
+  of warmth by a cool brand palette. A fixed or overlapping header must adapt to what
+  scrolls behind it (a light bar parked on a dark section reads as a stray stripe and
+  can drop the logo/link contrast); give it a section-aware theme swap or a treatment
+  that works over both, with a light and dark logo variant as needed. Mobile navigation
+  must stay reachable: never hide the nav links below a breakpoint with no replacement;
+  provide a real menu affordance. And "make now feel live" only if it is actually live;
+  hard-coded fake live data reads as set dressing and spends credibility.
 - Hardened the skill from first-round design reviews. Content is now visible by
   default (scroll reveals gated behind `@supports` and a JS class, so unsupported
   browsers and no-JS loads still show everything). Added guidance to derive page

@@ -165,9 +165,13 @@ that fit the brief; do not stack them all.
 - **Borrow a high-trust template, then subvert it.** Run a familiar, credible format
   (an Apple-style product launch, a spec sheet) deadpan over an unexpected subject. The
   borrowed structure carries authority; the mismatch carries the surprise.
-- **Make "now" feel live.** Real-world state for almost no visual cost: a real
-  open/closed banner, local time, a telemetry readout (tide, temperature, price). It
-  makes static marketing feel operated and current.
+- **Make "now" feel live, but only if it is actually live.** Real-world state for almost
+  no visual cost: a real open/closed banner, local time, a telemetry readout (tide,
+  temperature, price). It makes static marketing feel operated and current. The catch:
+  it must be real (compute it, or wire it to a source). Hard-coded fake "live" data (a
+  static "72 degrees, clear skies", a frozen order counter) reads as theme-park set
+  dressing to anyone who looks twice and spends credibility rather than building it. If
+  you cannot make it real, cut it or state it as a plain fact, not a live readout.
 - **Oversized numeric proof points as the typographic hero.** Hard numbers (1 day,
   10,000 parts, 3,000 clients) set huge double as both typography and trust signal.
 - **Dramatize the invisible.** For abstract or infrastructure products, render the
