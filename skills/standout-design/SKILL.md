@@ -170,6 +170,13 @@ paying special attention to:
   all ride up near the display size, the hierarchy flattens and it reads "everything is
   loud" instead of "one dramatic headline." Keep secondary text calm so the headline
   owns the scale.
+- **Layout fit: type fits its column and the hero fits the viewport.** Oversized
+  display type set in a narrow column will wrap one word per line and balloon the hero
+  to several screens tall, pushing the hero imagery off-screen. Confirm the headline
+  fits its actual column so the authored line breaks hold (no accidental word-by-word
+  stacking), the hero sits in roughly one viewport, and nothing important (a key image,
+  a CTA) runs off the bottom or the side. Size type to the space it actually has; widen
+  the column or shrink the companion element rather than letting the headline overrun.
 
 Then verify the work escaped the generic look and hit the craft bar:
 `references/anti-slop-checklist.md`.

@@ -42,9 +42,12 @@ All notable changes to this project are documented here. The format follows
   specific parent selector overrides it. Confirm CTA and control contrast as computed
   (a button under a `nav a` rule can have its text color out-specified and flipped to
   the link color, painting a light label on a light fill, in default and hover state),
-  confirm the first content clears a fixed header, and confirm the type hierarchy gap
+  confirm the first content clears a fixed header, confirm the type hierarchy gap
   (big display type wows via the gap to secondary text, not by making everything big;
-  keep the lede and meta calm).
+  keep the lede and meta calm), and confirm layout fit (oversized type in a narrow
+  column wraps word-by-word and balloons the hero past the viewport, pushing hero
+  imagery off-screen; size type to the space it has, and keep the hero to roughly one
+  viewport with nothing important running off the edge).
 - Added an imagery and illustration guide (`references/imagery-and-illustration.md`)
   and the rule to match imagery technique to subject: use photography, photoreal 3D, or
   AI imagery where the subject's texture is the appeal (food, products, fashion), and
