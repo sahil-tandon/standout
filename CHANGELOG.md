@@ -7,6 +7,19 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Changed
+- Hardened from a real build test (an online Scotland Yard board-game UI in a
+  "retro board-game craft" direction, four rounds of independent visual critique:
+  wow 6.5 to 7.5, craft 7 to 8). Added a "material pastiche" section to
+  `references/imagery-and-illustration.md` for briefs that imitate a physical object
+  (cardboard, print, paper, wood, ceramic, leather): put the material on the largest
+  hero surface (not just edges and props, texture only on the rim is the "themed web
+  app" tell), make the texture bold enough to survive at 1x (coarse fibre plus
+  large-scale aging mottle, not a timid 6 to 8 percent overlay), give printed/handmade
+  looks slight ink unevenness and mis-registration since crisp vector lines read as
+  digital, keep physical pieces matte and top-lit with a die-cut bevel (a glossy
+  radial dome reads as a UI dot), and treat wear (directional fold-crease shadow, edge
+  darkening, an on-surface printed legend) as art direction. Same recurring trap in a
+  new costume: craft pooling in the safe chrome while the hero surface stays flat.
 - Studied a batch of web-design inspiration and creativity sources (AddSearch,
   Awwwards, Webflow, Format, Eleken, Kota, MuffinGroup, CSS-Tricks, plus several
   listicles). Most repeated craft the skill already carries; the additive yield was

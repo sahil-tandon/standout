@@ -224,6 +224,50 @@ stop and use a photo or 3D render instead.
 
 ---
 
+## Material pastiche: when the look IS a physical object
+
+A whole class of briefs asks the interface to imitate a real material: a board game on
+cardboard, a printed map, a paper dossier, a wooden console, a ceramic toy, a leather
+ledger, a letterpress poster. These live or die on the same few moves, and the default
+failure is consistent and worth naming.
+
+- **Put the material on the largest (hero) surface, not just the edges and props.** The
+  signature tell of a "themed web app" is a page whose borders, chips, buttons, and
+  small objects carry texture while the big focal surface stays a flat clean fill. If
+  the thing is cardboard, the whole board must read as cardboard, especially the open
+  central field, not a smooth panel inside a textured frame. Texture only on the rim
+  reads as "a flat surface with a costume," which is exactly the giveaway.
+- **Make the texture bold enough to survive at real viewing scale.** A subtle 6-8%
+  grain overlay vanishes once the page is seen at normal size (and doubly so when
+  downscaled in a screenshot or on a dense display). Push amplitude AND coarseness:
+  use a coarse, low-frequency fibre/speckle plus a large-scale aging mottle (uneven
+  tonal blotching, foxing, dirt toward edges and creases), layered `multiply`, until
+  the surface unmistakably reads as the material at 1x. Then back off only where it
+  actually hurts legibility, do not pre-emptively keep it timid.
+- **Crisp vector lines betray a printed or handmade look.** Perfectly uniform stroke
+  width and flat saturation read as digital no matter how aged the paper behind them.
+  For litho/print/risograph/letterpress pastiches, give lines and fills slight ink
+  unevenness: density variation along the stroke, a faint texture or halftone inside
+  fills, hairline mis-registration between a color and its outline. The imperfection is
+  what sells "printed onto the material" over "drawn in software."
+- **Physical pieces are matte and top-lit, not glossy domes.** A token, tile, standee,
+  or knob should use a flat, top-lit fill (a near-vertical light-to-dark gradient) with
+  a die-cut bevel ring and a real contact shadow on the surface below. A radial
+  highlight hotspot reads as glossy enamel or plastic, i.e. a UI dot, not cardboard or
+  wood. Match the finish to the actual material: matte for card/paper/wood, sheen only
+  for genuinely glossy subjects.
+- **Embrace wear as art direction.** Fold creases (with a real directional valley
+  shadow, asymmetric, not an even gradient seam), soft edge darkening, a slight ink
+  bleed at a coastline or boundary, a printed legend/cartouche/scale bar drawn ON the
+  surface rather than floated over it as a translucent UI chip. These details are what
+  separate "a real object photographed on a table" from "a tasteful themed layout."
+
+The same trap as everywhere else in this skill, craft pooling in the safe places while
+the hero stays quiet, just wearing a different costume: here the chrome and props get
+all the texture while the main surface stays flat. Texture the hero first.
+
+---
+
 ## Making hand-coded illustration high-fidelity
 
 When stylized illustration IS the right call, the difference between flat-vector slop
