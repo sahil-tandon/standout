@@ -297,6 +297,18 @@ from lighting it like a photograph, not from more grain:
   reaches that bar more easily than a fully-usable UI, because deep chiaroscuro fights
   the legibility a working interface needs. Decide which one the brief actually wants
   before chasing the last point of polish in the wrong medium.
+- **If you do render, render the WHOLE scene, not a flat plate into a flat void.** A
+  common half-measure backfires: rendering one element photoreal (a top-down board, a
+  product) and dropping it into otherwise-flat CSS chrome with flat vector pieces on
+  top. The lit object next to flat UI cards, with stickers-on-a-photo tokens that do
+  not obey its light, reads as "a screenshot glued onto a UI" and scores *below* a
+  coherent all-CSS version. Tested: that composite regressed against the pure-CSS
+  baseline. The fix is to render the entire scene at an angle, the object on its
+  surface with the light spilling past its edges onto the ground, every prop and game
+  piece a real 3D object lit by the same source, with depth of field, so the frame
+  shares one light and one perspective. The live interactive layer then overlays a
+  coherent photoreal scene rather than clashing with it. One render that owns the whole
+  frame beats one photoreal element marooned among flat ones.
 
 ---
 
