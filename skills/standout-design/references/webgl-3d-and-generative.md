@@ -14,6 +14,7 @@ generative motifs. The goal is awe that is cheap to run and earns its weight.
 - [Fluid / liquid glass](#fluid--liquid-glass)
 - [The toolchain](#the-toolchain)
 - [Asset and delivery pipeline](#asset-and-delivery-pipeline)
+- [Photoreal plates: render in Blender, composite into live UI](#photoreal-plates-render-in-blender-composite-into-live-ui)
 - [The render-to-FBO skeleton](#the-render-to-fbo-skeleton)
 - [Generative visuals](#generative-visuals)
 - [Generative color](#generative-color)
@@ -260,6 +261,85 @@ shipping a raw, uncompressed model and rendering at full device pixel ratio.
 - **Source models** from Sketchfab (CC + online editor), Poly Haven and Quaternius
   (free, web-ready), or CGTrader / TurboSquid (marketplace) rather than modelling
   from scratch; retopo and re-bake before shipping.
+
+---
+
+## Photoreal plates: render in Blender, composite into live UI
+
+When a brief wants real material the DOM cannot fake (true cardboard tooth, a lamp's
+actual pooled light and falloff, dust in the beam, real depth of field), pure CSS/SVG
+plateaus around 8.5 to 9 and the last mile is a **baked render composited into the
+page**. This is a production pipeline with specific, tested moves and one decisive
+caveat. (Drives off the realism floor in "When 3D earns its place"; the "match
+technique to subject" rule lives in `imagery-and-illustration.md`.)
+
+**Render the WHOLE scene, never one element into a flat void.** The tempting
+half-measure (render one object photoreal, drop it into otherwise-flat CSS chrome with
+flat vector pieces) scores *below* a coherent all-CSS version, tested: the lit object
+next to flat panels, with sticker-on-a-photo tokens, reads as "a screenshot glued onto
+a UI." One render that owns the whole frame beats one photoreal element marooned among
+flat ones.
+
+**Pick the camera by what the page needs, this is the core decision:**
+- **Top-down orthographic, framed exactly to the object's edges** so the render maps
+  1:1 to a DOM rectangle. A live SVG/HTML overlay (hit-areas, highlights, moving
+  pieces) then aligns to it pixel-for-pixel using the same coordinate space. Use for a
+  **playable / interactive surface**. Realism comes from the material, raking light,
+  and real edge thickness, not from perspective.
+- **Angled perspective + shallow depth of field** for depth, parallax, and a hero
+  moment. Use for a **marketing / hero still**. Overlaying live interactive elements in
+  perspective is painful, so keep it static or near-static. A dramatic hero still
+  reaches a "stop and stare" bar more easily than a fully-usable UI, because deep
+  chiaroscuro fights the legibility a working interface needs.
+
+**The compositing technique (for the playable case):** the rendered plate becomes the
+surface (a `background-image` on the board/stage element); turn the SVG into a
+*transparent interaction layer*, hide the printed artwork the render now shows, and
+keep only invisible hit-areas, the reachable/hover glows, dynamic highlight strokes,
+and a focus-dim overlay for state. Live pieces sit on top, positioned in the same
+coordinate space. Everything stays aligned because plate and overlay share the object's
+geometry.
+
+**Bake the design INTO the surface.** Export the flat 2D artwork (render the SVG to a
+high-res PNG) and use it as the **albedo** on the 3D surface, so the print is lit by
+the real lamp and catches the real cardboard tooth, rather than sitting as a flat CSS
+layer on top that the light never touches.
+
+**Real pieces, not flat overlays.** Model game pieces / props as real 3D objects lit by
+the same source with real contact shadows. Flat vector tokens dropped on a photoreal
+surface read as stickers, they cast the same shadow everywhere regardless of where the
+light is, which is the single most damaging tell.
+
+**Lighting and look recipe (what actually worked):**
+- A warm **key** (a spot for a pooled hotspot with falloff, or an area light) raking
+  from one side; a dim **cool fill**; a **dark world** for chiaroscuro; and a visible
+  source **bloom** so the light reads as having an origin, not as "low brightness."
+- **View transform: use Standard, not AgX / Filmic, when the surface carries designed
+  or brand colors.** AgX desaturates and washes printed inks toward a faded-photo look;
+  Standard preserves the palette you art-directed. Reach for AgX/Filmic only for
+  naturally photographic subjects where you want filmic highlight rolloff.
+- Give the object real **thickness** plus a **contact shadow** so it seats on the
+  ground; a zero-thickness plate floats and reads as a decal.
+- Add surface micro-relief (a noise **Bump** for paper/cardboard tooth) bold enough to
+  read at 1x; raking light is what reveals it.
+- Tune **exposure** so the hotspot is bright but not blown and the far edges fall to
+  shadow (the falloff is the photographic tell).
+
+**Tooling.** Drive Blender headlessly via the **BlenderMCP** server (execute Python,
+render to disk, read the PNG back into the page). **Poly Haven** (free, usually on) for
+HDRIs, wood, and cardboard materials. **Sketchfab** (CC models) and **Hyper3D Rodin**
+(text-to-3D generation) are available but need an API key and an enable toggle.
+M-series Macs path-trace Cycles on the Metal GPU, one frame is quick.
+
+**The decisive caveat, choose the medium by SUBJECT, not by which tool just worked.**
+3D's strength is **hard-surface + texture**: a board, a product, a device, packaging,
+type, where simple geometry plus a good material reads photoreal. It is the **wrong
+tool for organic food**: a from-scratch or procedural burger renders as plastic and
+unappetizing (tested, decisively worse than the brand's real photo). For food, skin,
+fabric, anything whose appeal is organic texture, use **real photography**, and put the
+craft into compositing and lighting *that photo* into one scene. The exact pipeline
+that makes a cardboard board photoreal makes a burger look like a bath toy. Succeeding
+with 3D on one subject is not a reason to reach for it on the next.
 
 ---
 

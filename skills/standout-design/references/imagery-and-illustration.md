@@ -131,7 +131,11 @@ hero products where form and finish are the sell.
 PNG/WebP (or a baked turntable sprite sequence). You get full path-traced realism,
 zero runtime cost, and total art direction over light. Best when the hero is a single
 beauty shot: a bottle, a watch, a sneaker, a stylized food item you cannot photograph.
-Export at 2-3x for retina and serve a responsive `srcset`.
+Export at 2-3x for retina and serve a responsive `srcset`. For the full
+render-and-composite pipeline (top-down ortho for a playable surface vs angled hero
+still, baking artwork into the surface, real 3D pieces, the Standard-not-AgX gotcha,
+and the subject caveat that 3D is wrong for real food), see
+`webgl-3d-and-generative.md` -> "Photoreal plates."
 
 **Interactive (Three.js / React Three Fiber + drei, or Spline) for rotatable heroes.**
 Worth the lift only when rotation or configuration is part of the experience: a product

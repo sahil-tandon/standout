@@ -6,6 +6,23 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+- A "Photoreal plates: render in Blender, composite into live UI" section to
+  `references/webgl-3d-and-generative.md`, consolidating the hands-on 3D production
+  pipeline learned this session (previously only scattered as high-level principles):
+  render the whole scene not a flat element in a CSS void; pick the camera by need
+  (top-down orthographic framed to the object for a 1:1 alignable playable surface, vs
+  angled perspective + DoF for a hero still); the compositing technique (rendered plate
+  as the surface, SVG turned into a transparent interaction/hit/glow overlay, real 3D
+  pieces on top); bake the 2D artwork in as the albedo so it catches real light; the
+  lighting/look recipe (warm key + cool fill + dark world + source bloom, real
+  thickness + contact shadow, exposure for falloff); the tested "use Standard not
+  AgX/Filmic view transform when the surface carries brand colors" gotcha; the
+  BlenderMCP / Poly Haven / Sketchfab / Hyper3D tooling path; and the decisive
+  subject-dependent caveat (3D is right for hard-surface + texture, wrong for organic
+  food, which renders plastic and must use real photography). Cross-linked from the
+  imagery reference.
+
 ### Changed
 - Pushed the same Scotland Yard board UI further (eight versions, eight rounds of
   independent visual critique, wow 6.5 to ~8.5, craft 7 to ~8.5) to find the ceiling.
