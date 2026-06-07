@@ -149,6 +149,42 @@ one safe choice is itself the generic tell.
 
 ---
 
+## Moves worth stealing (studied from standout sites)
+
+Specific, reusable techniques observed across great real-world sites. Pull one or two
+that fit the brief; do not stack them all.
+
+- **Copy is part of the design system.** A short, voice-heavy line or a recurring
+  refrain (a repeated tagline across sections) carries tone and welds a multi-section
+  page into one voice more cheaply than any visual token. Write the voice, then design.
+- **Reframe the user's main objection into the headline.** Lead with the line that
+  neutralizes the decision-maker's biggest fear ("turn screen time into learning
+  time"). The headline does sales work, not just description.
+- **Short, declarative headline voice.** Three confident words ("Capable, safe, fun.")
+  beat adjective-stuffed marketing copy.
+- **Borrow a high-trust template, then subvert it.** Run a familiar, credible format
+  (an Apple-style product launch, a spec sheet) deadpan over an unexpected subject. The
+  borrowed structure carries authority; the mismatch carries the surprise.
+- **Make "now" feel live.** Real-world state for almost no visual cost: a real
+  open/closed banner, local time, a telemetry readout (tide, temperature, price). It
+  makes static marketing feel operated and current.
+- **Oversized numeric proof points as the typographic hero.** Hard numbers (1 day,
+  10,000 parts, 3,000 clients) set huge double as both typography and trust signal.
+- **Dramatize the invisible.** For abstract or infrastructure products, render the
+  mechanism as a tangible 3D/visual form instead of explaining it with bullets.
+- **Name sections as places, not labels.** Turning a nav or section grid into named,
+  explorable "pavilions" or rooms upgrades a menu into an experience.
+- **Let imagery supply the color; keep the chrome neutral.** When real photos or video
+  carry the palette, run minimal surrounding UI so the imagery sings.
+- **A single saturated accent on a neutral, airy field** reads as premium
+  consumer/precision-tech; reserve the loud palette for expressive briefs.
+- **One signature tactile interaction that recurs** (a consistent ripple, a magnetic
+  pull) makes a site feel authored, more than ten generic scattered effects.
+- **Treat dead time as a designed beat.** A loading or empty state is a brand moment,
+  not a spinner.
+
+---
+
 ## The anti-slop pre-ship checklist
 
 Run this before calling any frontend done.
