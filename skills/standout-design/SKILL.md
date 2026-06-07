@@ -28,6 +28,31 @@ festival, an editorial spread. Restraint is allowed, but restraint must still be
 STRIKING; "tasteful and competent but quiet" is a miss. If a stranger would not stop
 and go "wow" on sight, it is not done yet. Wow first, then make it ownable and correct.
 
+**How to actually manufacture the wow (do not skip; "be amazing" is not enough).** The
+default failure is a pleasant, safe hero: big serif headline on the left, a smallish
+illustration or image on the right, and a large empty quadrant. That whispers. Use
+these concrete levers to make it shout:
+- **Scale.** Make the focal subject huge: fill or break the viewport with it. A small
+  graphic in a corner whispers; one that dominates the screen seizes the eye. Oversize
+  the hero subject and/or the type.
+- **Immersion over the safe split.** Avoid the text-left / image-right / dead-space-
+  right layout; it is the safe default and rarely wows. Go full-bleed and immersive:
+  let the subject bleed off edges, sit center stage, or wrap the type. Kill empty
+  quadrants. The hero should feel like a scene or a poster, not a slide.
+- **Color and light intensity.** Push saturation and contrast; add a real light source
+  (a glow, a spotlight, a deep gradient with dimension) so the page feels like a place,
+  not a flat tint. Atmosphere with depth.
+- **One dramatic moment on entry.** Something felt instantly: a bold load reveal that
+  resolves into the page, parallax/depth, a living element, a 3D-ish tilt. Not scattered
+  micro-animations, one big orchestrated beat.
+- **A single unmissable focal point.** The eye should be grabbed by one thing at once,
+  not invited to scan an even, balanced composition.
+- **Intensity matched to the brief, undiluted.** Food should look abundant and
+  mouth-watering; a festival loud; luxury dramatically spare (extreme negative space
+  around one perfect object), never a timid middle.
+Self-check: would this stop a scroll? If it is merely pleasant, scale the focal element
+up, go more immersive, push the color and light, and add the one dramatic entry moment.
+
 Produce working code (HTML/CSS/JS, React, Vue, whatever fits). Aesthetics and
 function both matter: a beautiful page that is slow, broken, or inaccessible is not
 standout, it is a liability.

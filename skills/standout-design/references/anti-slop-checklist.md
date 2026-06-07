@@ -160,3 +160,9 @@ If the work has any of these, it reads as machine-default. Replace each one.
   frames holding thin decorative line-art instead of real content (a portrait, a
   legible chart). Negative space must be intentional and anchored; a figure must
   contain something.
+- **The safe, quiet hero.** Big headline on the left, a smallish image or illustration
+  on the right, a large empty quadrant, pleasant but it does not stop you. This is the
+  single most common "tasteful but no wow" miss. Scale the focal subject up until it
+  dominates, go full-bleed and immersive instead of the text/image split, push the
+  color and light, and add one dramatic entry moment. The hero must seize the eye, not
+  merely please it.
