@@ -48,6 +48,15 @@ type out-craft spectacle here.
 - **Motion:** sparse and exact; one signature transition, slow expensive easing.
 - **Fits:** studios, writers, fashion, premium brands that want to read as authored.
 
+Two moves lift a Swiss grid from correct to memorable. **Organic annotation over the
+rigid grid:** lay a hand-drawn mark (a marker ellipse scribbled around the active item,
+a circled note, a casual aside or emoji) on top of the machined layout. The tension
+between exact and human *is* the personality; without it the same grid reads cold.
+**A primitive glyph system as wayfinding:** assign a small family of marks (circle,
+square, triangle, cross) to your sections and reuse them everywhere, nav, legends,
+bullets, diagram vertices, footer. Repetition of one simple symbol set is the cheapest,
+strongest cohesion device the direction has. See `signature-builds.md`.
+
 ### Maximalist / expressive
 
 More is more, executed with intent rather than chaos. Density, clashing high-chroma
@@ -86,6 +95,10 @@ engineered, technical, and precise.
   display faces (OffBit) for headers.
 - **Color:** near-black + one electric accent; constrained, never soft.
 - **Motion:** scramble/decode text effects, terminal-style reveals, blinking cursors.
+- **Instruments:** wire the panel vocabulary into real components, nested rotating
+  gauge/tachometer rings (numbered tick marks) around a central button or stat,
+  coordinate readouts, a blinking caret on an oversized headline. A slowly rotating dial
+  framing a CTA is a striking close. See `signature-builds.md`.
 - **Fits:** crypto, AI, developer tools, gaming.
 
 ### Organic / natural

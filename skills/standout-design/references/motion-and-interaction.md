@@ -425,6 +425,16 @@ slow connection, serve a single fallback still and upgrade to the full sequence 
 when bandwidth allows. If frames need shader effects layered on top, do it in WebGL
 instead of flat canvas playback.
 
+**Scrub a vector loop for a cheap "3D" object.** When the hero is a clean form (a
+rotating wireframe, an exploding diagram, a turntable of a product), you often do not
+need WebGL or a heavy image sequence: pre-render the rotation once (After Effects, or a
+Blender turntable) and export it to **Lottie**, then drive the player's frame from scroll
+progress instead of letting it autoplay. A `lottie-web`/`bodymovin` instance with
+`anim.goToAndStop(progress * anim.totalFrames, true)` wired to a ScrollTrigger `scrub`
+gives a buttery, resolution-independent "3D" object for a fraction of the payload and
+zero shader code. This is how many no-code/award agency sites fake an immersive 3D hero.
+Force the Canvas renderer for large loops, and ship `.lottie` not raw `.json`.
+
 ---
 
 ## Rive vs Lottie: the interactive-vector layer

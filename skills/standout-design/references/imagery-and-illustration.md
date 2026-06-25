@@ -45,6 +45,7 @@ and **what is the quality bar / effort budget?**
 | Editorial line art, geometric, retro, isometric, diagram | **Hand-coded SVG/CSS** | Stylization is the point; vector is the correct register |
 | Brand marks, logos, iconography | **Hand-coded SVG** | Crisp, scalable, on-brand |
 | Abstract atmosphere, gradients, generative | **Canvas/WebGL/SVG** | See `webgl-3d-and-generative.md` |
+| Screen-based work you are showcasing (sites, apps, dashboards) | **Real screenshots, tilted in perspective** | See "perspective mockup clusters" below; a flat thumbnail grid undersells it |
 
 **The rule that prevents the most damage:** if the subject is something you would
 photograph for a magazine or a menu, do not draw it as flat vector. Use a photo, a 3D
@@ -56,6 +57,15 @@ the first rung that clears your quality bar: art-directed stock photo -> treated
 (duotone/grain) -> AI-generated and art-directed -> pre-rendered 3D still -> bespoke
 photo shoot -> interactive 3D. Do not pay for interactive WebGL when a single treated
 photograph would land harder.
+
+**Showing screen-based work: perspective mockup clusters.** When the asset *is* a screen
+(a website, an app, a dashboard you are showcasing), a flat grid of rectangular
+thumbnails reads as a contact sheet and flattens the wow. Instead, float the real
+screenshots on an isometric/perspective plane, tilt them, overlap them, and parallax
+them lightly on scroll or pointer so they feel like art-directed product rather than
+documentation. Crop generously and let edges bleed off-frame. Pair with the editorial
+work-index pattern (a mono ledger whose rows summon a cursor-following preview) when
+there are many projects to show. See `signature-builds.md` and `narrative-and-detail.md`.
 
 ---
 

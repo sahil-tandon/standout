@@ -112,6 +112,19 @@ Pacing and chaptering techniques:
 - **Chaptering** gives the long page rhythm: distinct scenes with their own beat, with
   transitions (cross-fades, wipes, camera moves) marking the cuts.
 
+**The persistent-object spine (the strongest version).** The most memorable
+scrollytelling is not a sequence of separate scenes; it is *one object that carries the
+whole story*. Pick a single form that embodies the idea (a wireframe shape whose
+vertices are your services, a product that disassembles, a map that zooms) and make it
+the hero, the navigation metaphor, and the section divider at once. As the user scrolls,
+that one object rotates, morphs, and *gains structure*, stepping through the taxonomy one
+node at a time while a matching legend highlights and a per-node detail panel swaps in.
+Because the architecture is born from the artifact, the page cannot collapse into the
+generic skeleton. Drive the rotation, the morph, and the panel swaps from one
+interpolated scroll value so nothing drifts. The rotating "3D" object is often cheapest
+as a pre-rendered vector loop scrubbed on scroll (see `motion-and-interaction.md`), not
+WebGL. Worked end-to-end in `signature-builds.md`.
+
 **Reference stack:** GSAP plus ScrollTrigger for the timeline, **Lenis** for
 smooth/inertial scroll, optionally Three.js for 3D scenes, Framer Motion / Motion for
 React-side scroll ties.
@@ -170,6 +183,14 @@ These are the touches that make a visitor feel a site was *made*, not assembled.
 - **Surprising hover states.** Image swaps, color inversions, content peeks, text
   scrambles, cursor-context labels (the cursor becomes "VIEW" / "DRAG" / "PLAY" over an
   element). The surprise is the point: hover should reward exploration.
+- **Cursor-following media preview (the index/list pattern).** On a text list or ruled
+  index (projects, articles, case studies), summon the row's image *next to the cursor*
+  on hover and let it follow the pointer, instead of showing every thumbnail at once.
+  Lerp a single floating preview element toward the cursor for weight, swap its image on
+  row hover, and for extra polish fan two or three layers with small `rotate`/`translate`
+  offsets into a shallow perspective stack. This is what lets an editorial mono ledger
+  outclass a card grid: the list stays calm and textual; imagery appears on demand. Keep
+  the preview decorative-only so the list works without a pointer and via keyboard.
 - **Scroll progress indicators.** A top bar or radial that reflects real read/scroll
   progress. Tie it to actual document progress, not a timer.
 - **Animated counters.** Numbers count up when scrolled into view (stats, awards, years).

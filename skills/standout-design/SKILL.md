@@ -112,7 +112,10 @@ both win; timid middle-ground does not. Do not default to a look, choose one.
   feel like a folded printed object; a festival like a poster or flyer; an app like
   the app's own UI; a restaurant like a menu. Let the artifact dictate the grid, the
   entry point, the reading order, and the section logic. Two different briefs must not
-  produce the same layout in different colors.
+  produce the same layout in different colors. The strongest version of this is **one
+  committed metaphor as the page's spine**: a single object (a form whose parts are your
+  services, a product that disassembles) that is the hero, the nav, and the
+  scrollytelling thread at once. See `references/signature-builds.md`.
 - **Beat the LAZY default, not the genre itself.** Each category has a cliche look:
   dev tools default to near-black + neon-green + a clean grotesque; synthwave to a
   striped sun + scanlines + pink/cyan; SaaS to a purple gradient; AI to violet-on-white.
@@ -155,8 +158,12 @@ single easing token site-wide as the motion accent. Animate only `transform` and
 ### 4. Reach for advanced visuals only when they serve the concept
 WebGL/3D, shaders, and generative backgrounds are powerful but optional. The "wow" is
 a reactive shader or a baked, art-directed scene, not heavy geometry. Awe does not
-require WebGL (big type + whitespace + cursor craft is often enough). See
-`references/webgl-3d-and-generative.md`.
+require WebGL (big type + whitespace + cursor craft is often enough). **Wow is
+choreography, not engine:** many award-tier sites ship on constrained or no-code stacks
+with no bespoke WebGL, faking an immersive 3D hero by scrubbing a pre-rendered vector
+loop on scroll. Reach for a stronger concept and tighter motion timing before reaching
+for a 3D engine. See `references/webgl-3d-and-generative.md` and
+`references/signature-builds.md`.
 
 ### 5. For apps and product UI, switch modes
 Dashboards, SaaS, and tools need density and usability plus polish, not marketing-site
@@ -322,6 +329,7 @@ Read the file relevant to the step you are on; do not load all of them upfront.
 | `references/webgl-3d-and-generative.md` | Step 4, when 3D/shaders/generative earn their place. |
 | `references/app-and-product-ui.md` | Step 5, app/dashboard/product UI work. |
 | `references/narrative-and-detail.md` | Loaders, intros, sound, and the micro-details that leave a lasting impression. |
+| `references/signature-builds.md` | Worked teardowns of standout archetypes (the single-metaphor site, the editorial work index) and the reusable moves behind them. |
 | `references/accessibility.md` | Step 6, the stunning-and-accessible playbook. |
 | `references/tech-stack.md` | Choosing libraries: the library-to-effect map and framework notes. |
 | `references/anti-slop-checklist.md` | Step 7, the final pre-ship pass. |

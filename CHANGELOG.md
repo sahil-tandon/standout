@@ -7,6 +7,22 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- A new `references/signature-builds.md`: worked teardowns of two standout archetypes,
+  the single-metaphor site (one persistent object as hero + nav + scrollytelling spine,
+  scrubbed-vector "3D", glyph wayfinding, annotation-over-grid, instrument-dial CTA) and
+  the editorial work index (mono ledger + cursor-following preview stack + filter pills +
+  award badges), plus the harvested detail patterns and cohesion mechanics behind them.
+  Registered in SKILL.md's reference table. The unifying principle, "wow is choreography
+  and one committed metaphor, not a heavy 3D engine", is also folded into SKILL.md
+  (step 1 architecture and step 4 advanced visuals).
+- Wove the supporting techniques into the existing references: the persistent-object
+  scrollytelling spine and the cursor-following media-preview index pattern into
+  `references/narrative-and-detail.md`; organic-annotation-over-a-rigid-grid and the
+  primitive glyph wayfinding system (Swiss/brutalist) plus instrument/gauge-dial motifs
+  (retro-technical/HUD) into `references/aesthetic-directions.md`; scrubbing a
+  pre-rendered Lottie vector loop for a cheap "3D" hero into
+  `references/motion-and-interaction.md`; and perspective-tilted screen-mockup clusters
+  (with a new decision-table row) into `references/imagery-and-illustration.md`.
 - A "Photoreal plates: render in Blender, composite into live UI" section to
   `references/webgl-3d-and-generative.md`, consolidating the hands-on 3D production
   pipeline learned this session (previously only scattered as high-level principles):
