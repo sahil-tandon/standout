@@ -7,6 +7,22 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- `standout-notifications` plugin: iTerm2 tab colors that track working / waiting /
+  idle state via lifecycle hooks, a random R2-D2 sound on the `Notification` event,
+  and a `/sound` toggle. Hooks are plugin-relative via `${CLAUDE_PLUGIN_ROOT}`; the
+  mute flag lives at `~/.claude/standout-notifications.muted` so it survives updates.
+
+### Changed
+- Restructured the repo from a single root-level plugin into a proper multi-plugin
+  marketplace: each plugin now lives under `plugins/<name>/`, and
+  `.claude-plugin/marketplace.json` lists them with `source: ./plugins/<name>`. The
+  `standout-design` skill moved from the repo root to `plugins/standout-design/`
+  (history preserved via `git mv`); install commands are unchanged for users.
+- Repo renamed `standout-design` to `standout` to reflect the family. The root
+  `README.md` is now the marketplace front door; design-specific docs moved to
+  `plugins/standout-design/README.md`.
+
+### Added (design references)
 - A new `references/signature-builds.md`: worked teardowns of two standout archetypes,
   the single-metaphor site (one persistent object as hero + nav + scrollytelling spine,
   scrubbed-vector "3D", glyph wayfinding, annotation-over-grid, instrument-dial CTA) and
