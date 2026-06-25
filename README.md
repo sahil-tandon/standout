@@ -21,7 +21,7 @@ A self-hostable Claude Code plugin marketplace. Add it once, then install any of
 The **statusline** lives in its own repo with its own installer, because Claude Code
 does not allow plugins to set the status line (it is a user-settings-only feature):
 
-- [claude-code-statusline](https://github.com/sahil-tandon/claude-code-statusline)
+- **claude-code-statusline** (coming soon)
 
 ## Layout
 
