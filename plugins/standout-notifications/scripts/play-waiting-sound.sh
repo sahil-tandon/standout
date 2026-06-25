@@ -10,7 +10,7 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 sounds_dir="$script_dir/../sounds"
 mute_flag="${HOME}/.claude/standout-notifications.muted"
 
-# Honor the mute toggle (managed by the /sound command / toggle script).
+# Honor the mute toggle (managed by the /sound command).
 [ -f "$mute_flag" ] && exit 0
 
 # Collect the pool (wav + mp3). nullglob so an empty dir yields an empty array.
