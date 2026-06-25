@@ -20,11 +20,15 @@ The repo root is the marketplace; each plugin lives under `plugins/<name>/`.
   - `hooks/hooks.json`: lifecycle hooks (SessionStart / UserPromptSubmit / Stop /
     Notification). Commands MUST use `${CLAUDE_PLUGIN_ROOT}` for paths, never
     hardcoded `/Users/...` or `$HOME/.claude/...`.
-  - `scripts/`: the hook scripts. Self-locate their assets relative to the script
-    (`$(dirname "${BASH_SOURCE[0]}")`), not via hardcoded paths.
+  - `scripts/`: the hook scripts (iterm-tab-status.sh, play-waiting-sound.sh).
+    Self-locate their assets relative to the script (`$(dirname "${BASH_SOURCE[0]}")`),
+    not via hardcoded paths. Referenced from hooks.json via `${CLAUDE_PLUGIN_ROOT}`.
   - `sounds/`: bundled audio. Persistent state (the mute flag) must live OUTSIDE the
     plugin dir (`~/.claude/standout-notifications.muted`) so it survives updates.
-  - `commands/sound.md`: the `/sound` slash command, also using `${CLAUDE_PLUGIN_ROOT}`.
+  - `commands/sound.md`: the `/sound` slash command. It is SELF-CONTAINED: it inlines
+    the mute-flag toggle using only `$HOME` and bash, with no `${CLAUDE_PLUGIN_ROOT}`
+    dependency. This is deliberate: `${CLAUDE_PLUGIN_ROOT}` substitution is documented
+    for hook commands but NOT for command files, so commands must not rely on it.
 
 ## Conventions (in addition to the global ~/CLAUDE.md)
 
