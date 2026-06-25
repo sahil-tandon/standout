@@ -1,88 +1,52 @@
-# standout-design
+# standout
 
-> Build sites and apps with real craft: bold art direction, distinctive type,
-> high-impact motion, and accessibility, none of the generic AI look.
+> The `standout-*` family of craft plugins for Claude Code.
 
-A Claude Code skill that makes your agent produce **distinctive, memorable frontends
-for websites and apps**, instead of the default AI look (Inter on white, purple
-gradients, three evenly-spaced rounded cards, timid motion). It replaces that with
-committed art direction and real craft, while keeping the result fast and accessible.
-
-Flagship skill of the `standout-*` family.
-
-## What it does
-
-When you ask your agent to build, design, style, or redesign any web component,
-page, landing site, portfolio, dashboard, or app UI, `standout-design` activates and
-guides it through a real design process:
-
-1. **Commit to a concept and one bold direction** before any code.
-2. **Build the visual system**: distinctive typography (never default fonts), a
-   dominant color plus one sharp accent in OKLCH, atmosphere over flat fills, and an
-   intentional layout.
-3. **Add purposeful motion**: one orchestrated reveal, a single reused easing token,
-   compositor-friendly only.
-4. **Reach for advanced visuals (WebGL, shaders, generative) only when they serve the
-   concept.**
-5. **Switch modes for apps and product UI**: density, the proven component stack, the
-   "Linear look" as a system.
-6. **Gate on performance and accessibility**, the part most flashy sites skip, which
-   is exactly why doing it well makes the work stand out.
-7. **Run an anti-slop checklist** before calling it done.
-
-## Install (Claude Code)
-
-Add this repo as a plugin marketplace, then install the plugin:
+A self-hostable Claude Code plugin marketplace. Add it once, then install any of the
+`standout-*` plugins a la carte.
 
 ```
-/plugin marketplace add sahil-tandon/standout-design
-/plugin install standout-design@standout
+/plugin marketplace add sahil-tandon/standout
 ```
 
-The skill triggers automatically on frontend/design requests. You can also invoke it
-explicitly.
+## Plugins
 
-**Manual install** (without the marketplace): copy `skills/standout-design/` into your
-`~/.claude/skills/` directory.
+| Plugin | What it does | Install |
+|---|---|---|
+| **[standout-design](plugins/standout-design/)** | Distinctive, memorable frontends with real craft (art direction, type, motion, accessibility), none of the generic AI look. | `/plugin install standout-design@standout` |
+| **[standout-notifications](plugins/standout-notifications/)** | iTerm tab colors that track working / waiting / idle, plus an R2-D2 sound when Claude needs you. Includes `/sound`. | `/plugin install standout-notifications@standout` |
 
-## What's inside
+## Companion (not a plugin)
+
+The **statusline** lives in its own repo with its own installer, because Claude Code
+does not allow plugins to set the status line (it is a user-settings-only feature):
+
+- [claude-code-statusline](https://github.com/sahil-tandon/claude-code-statusline)
+
+## Layout
 
 ```
-standout-design/
-├── .claude-plugin/            plugin + self-hostable marketplace manifests
-└── skills/standout-design/
-    ├── SKILL.md               the workflow + non-negotiables
-    ├── references/            12 craft guides, loaded on demand
-    │   ├── foundations.md            principles of awe + the canon craft rules
-    │   ├── aesthetic-directions.md   choosing a bold art direction
-    │   ├── typography.md             distinctive type, named faces, techniques
-    │   ├── color-and-atmosphere.md   OKLCH, gradients, grain, glass
-    │   ├── layout-and-composition.md grids, breakout, bento, scroll architecture
-    │   ├── motion-and-interaction.md scroll, transitions, cursors, easing, kinetic type
-    │   ├── webgl-3d-and-generative.md when 3D/shaders/generative earn their place
-    │   ├── app-and-product-ui.md     dashboards, product UI, the Linear look
-    │   ├── narrative-and-detail.md   loaders, intros, sound, micro-details
-    │   ├── accessibility.md          stunning AND accessible (the differentiator)
-    │   ├── tech-stack.md             the library-to-effect decision map
-    │   └── anti-slop-checklist.md    the pre-ship pass
-    └── assets/snippets/        working, copy-pasteable building blocks
+standout/
+├── .claude-plugin/marketplace.json     lists every standout-* plugin
+└── plugins/
+    ├── standout-design/                skill plugin (design craft)
+    └── standout-notifications/         hooks plugin (tab colors + sound + /sound)
 ```
 
-Every motion snippet honors `prefers-reduced-motion`. See
-`skills/standout-design/assets/snippets/README.md` for the snippet index.
+## Updating
 
-## Why it is different
+```
+/plugin marketplace update standout
+```
 
-Most design skills stop at "make it pretty." `standout-design` adds the two things
-they skip: **accessibility as craft** (stunning and inclusive, not one or the other)
-and a **bundled, research-backed reference set plus a working snippet library**, so
-the agent has real technique to draw on, not just adjectives.
+## Developing locally
 
-## The standout-* family
+Test changes before publishing by adding the working copy as a local marketplace:
 
-This is the first of a planned family of craft skills that share the `standout-`
-prefix and a single self-hostable marketplace. Future skills can be added as new
-plugins in `.claude-plugin/marketplace.json` without changing how users install.
+```
+/plugin marketplace add ./standout
+/plugin install standout-notifications@standout
+```
 
 ## License
 
