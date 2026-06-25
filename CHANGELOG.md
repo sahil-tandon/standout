@@ -4,10 +4,12 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and this project adheres to
 [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [v0.2.0] (2026-06-25): Multi-plugin marketplace; add standout-notifications
+
+Per-plugin versions in this release: standout-design 0.2.0, standout-notifications 0.1.0.
 
 ### Added
-- `standout-notifications` plugin: iTerm2 tab colors that track working / waiting /
+- `standout-notifications` plugin (0.1.0): iTerm2 tab colors that track working / waiting /
   idle state via lifecycle hooks, a random R2-D2 sound on the `Notification` event,
   and a `/sound` toggle. Hooks are plugin-relative via `${CLAUDE_PLUGIN_ROOT}`; the
   mute flag lives at `~/.claude/standout-notifications.muted` so it survives updates.

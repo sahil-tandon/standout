@@ -8,7 +8,7 @@
     {
       "name": "standout-design",
       "description": "Build standout frontends for websites and apps with real craft: bold art direction, distinctive typography, high-impact motion, and accessibility, none of the generic AI look.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "source": "./plugins/standout-design",
       "author": {
         "name": "Sahil Tandon"
