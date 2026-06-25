@@ -1,6 +1,6 @@
 {
   "name": "standout",
-  "description": "The standout-* family of craft plugins for Claude Code. First up: standout-design.",
+  "description": "The standout-* family of craft plugins for Claude Code: distinctive design, and a polished notification experience.",
   "owner": {
     "name": "Sahil Tandon"
   },
@@ -14,6 +14,17 @@
         "name": "Sahil Tandon"
       },
       "category": "design",
+      "homepage": "https://github.com/sahil-tandon/standout"
+    },
+    {
+      "name": "standout-notifications",
+      "description": "Know what Claude Code is doing at a glance: iTerm tab colors that track working / waiting / idle state, plus an R2-D2 sound when Claude needs you. Includes a /sound toggle.",
+      "version": "0.1.0",
+      "source": "./plugins/standout-notifications",
+      "author": {
+        "name": "Sahil Tandon"
+      },
+      "category": "productivity",
       "homepage": "https://github.com/sahil-tandon/standout"
     }
   ]
