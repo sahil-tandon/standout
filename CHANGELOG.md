@@ -4,6 +4,17 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and this project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## [v0.2.1] (2026-06-26): Fix the tab-emoji setup instruction
+
+Per-plugin versions in this release: standout-design 0.2.0, standout-notifications 0.1.1.
+
+### Fixed
+- `standout-notifications` (0.1.1): corrected the one-time iTerm2 setup for the tab-status
+  emoji in both the plugin README and the `iterm-tab-status.sh` header comment. Current
+  iTerm2 builds make the **Title** dropdown preset-only, so it no longer accepts an
+  interpolated string. The `\(user.claudeStatus)` value now goes in the **Subtitle** field,
+  and the docs note that the tab color alone is enough (the emoji is optional).
+
 ## [v0.2.0] (2026-06-25): Multi-plugin marketplace; add standout-notifications
 
 Per-plugin versions in this release: standout-design 0.2.0, standout-notifications 0.1.0.
