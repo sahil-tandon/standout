@@ -2,9 +2,10 @@
 # Set iTerm2 tab color + claudeStatus user variable to indicate Claude state.
 # Usage: iterm-tab-status.sh <working|waiting|idle|reset>
 #
-# To make the emoji visible in the tab title, configure iTerm2:
-#   Settings > Profiles > General > Title > "Tab title" set to e.g.
-#   \(user.claudeStatus) \(session.name)
+# To make the emoji visible in the tab, configure iTerm2:
+#   Settings > Profiles > General > Subtitle set to: \(user.claudeStatus)
+# Use Subtitle, not Title: current iTerm2 builds make the Title dropdown
+# preset-only, so it no longer accepts an interpolated string.
 # (Tab color works regardless of profile settings.)
 
 state="${1:-idle}"
