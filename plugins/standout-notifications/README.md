@@ -16,12 +16,16 @@ Know what Claude Code is doing without watching the screen.
 
 ## One-time iTerm2 setup (for the tab title emoji)
 
-Tab *color* works with no setup. To also show the status emoji in the tab title,
-set **Settings > Profiles > General > Title > Tab title** to:
+Tab *color* works with no setup, and the color alone is enough to tell tabs apart
+at a glance. To *also* show the status emoji in the tab, put this in
+**Settings > Profiles > General > Subtitle**:
 
 ```
-\(user.claudeStatus) \(session.name)
+\(user.claudeStatus)
 ```
+
+Use the **Subtitle** field, not Title: current iTerm2 builds make the Title
+dropdown preset-only, so it no longer accepts an interpolated string.
 
 ## Notes
 

@@ -1,7 +1,7 @@
 {
   "name": "standout-notifications",
   "description": "Know what Claude Code is doing at a glance: iTerm tab colors that track working / waiting / idle state, plus an R2-D2 sound when Claude needs you. Includes a /sound toggle.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Sahil Tandon"
   },
