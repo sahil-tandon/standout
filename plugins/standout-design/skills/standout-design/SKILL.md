@@ -361,7 +361,7 @@ Read the file relevant to the step you are on; do not load all of them upfront.
 | `references/signature-builds.md` | Worked teardowns of standout archetypes (the single-metaphor site, the editorial work index) and the reusable moves behind them. |
 | `references/accessibility.md` | Step 7, the stunning-and-accessible playbook. |
 | `references/tech-stack.md` | Choosing libraries: the library-to-effect map and framework notes. |
-| `references/anti-slop-checklist.md` | Step 8, the final pre-ship pass. |
+| `references/anti-slop-checklist.md` | After Step 8, the final pre-ship pass. |
 
 ## Posture
 
