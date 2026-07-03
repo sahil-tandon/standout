@@ -129,7 +129,26 @@ both win; timid middle-ground does not. Do not default to a look, choose one.
   appealing (see "keep the subject's emotional register" below) just to look different;
   fix the real flaws (legibility, contrast, hierarchy) instead of fleeing the look.
 
-### 2. Build the visual system
+### 2. Show, don't name: let the user pick a direction they can SEE
+Users cannot be expected to know what japandi, art deco, or neo-brutalism
+mean. When the direction is not already fixed, never ask in words; show
+options in the browser and let them pick:
+- Curate 4-6 styles from `references/design-styles-catalog.md` that genuinely
+  fit the brief, spanning families (one calm, one loud, one dark, one
+  unexpected; never near-neighbors, no filler).
+- Build a self-contained tasting-menu HTML where every tile is a mini-hero of
+  the USER'S ACTUAL project (their name, their headline, their subject) in
+  that style, numbered, captioned with a layperson essence. Open it in the
+  browser; take the pick in chat.
+- Round two: 3-4 palette variants of the chosen style, differing on real mood
+  axes (darker/lighter, warmer/cooler, louder/quieter), typography and layout
+  held identical so color is the only variable. Mini pages, never swatches.
+- Record the choice as a comment header in the build (style + palette) so
+  later sessions pick up the thread.
+- Skip when the user named a direction, is iterating on an existing design,
+  or delegates the choice. Full workflow: `references/style-picker.md`.
+
+### 3. Build the visual system
 Type, color, and layout carry most of the impression.
 - **Typography** is the #1 tell of generic AI output. Never ship Inter / Roboto /
   Arial / system-ui as the display face. Pair a distinctive display face with a
@@ -149,13 +168,15 @@ Type, color, and layout carry most of the impression.
   sheen) and layered light, not flat fills. Full guide:
   `references/imagery-and-illustration.md`.
 
-### 3. Add motion and interaction
+### 4. Add motion and interaction
 Motion is where standout sites separate from competent ones, but it must be
 purposeful. One orchestrated load reveal beats scattered micro-animations. Reuse a
 single easing token site-wide as the motion accent. Animate only `transform` and
-`opacity`. Keep micro-interactions sub-200ms. See `references/motion-and-interaction.md`.
+`opacity`. Keep micro-interactions sub-200ms. See `references/motion-and-interaction.md`;
+for parallax and scroll-driven storytelling (when scroll maps to a nameable axis),
+see `references/scrollytelling-and-parallax.md`.
 
-### 4. Reach for advanced visuals only when they serve the concept
+### 5. Reach for advanced visuals only when they serve the concept
 WebGL/3D, shaders, and generative backgrounds are powerful but optional. The "wow" is
 a reactive shader or a baked, art-directed scene, not heavy geometry. Awe does not
 require WebGL (big type + whitespace + cursor craft is often enough). **Wow is
@@ -165,12 +186,12 @@ loop on scroll. Reach for a stronger concept and tighter motion timing before re
 for a 3D engine. See `references/webgl-3d-and-generative.md` and
 `references/signature-builds.md`.
 
-### 5. For apps and product UI, switch modes
+### 6. For apps and product UI, switch modes
 Dashboards, SaaS, and tools need density and usability plus polish, not marketing-site
 spectacle. Different motion budget, the "Linear look" as a system, dark-mode tokens,
 command palettes, real empty states. See `references/app-and-product-ui.md`.
 
-### 6. Gate on performance and accessibility (this is the differentiator)
+### 7. Gate on performance and accessibility (this is the differentiator)
 Most flashy sites fail here, which is exactly why doing it well makes work stand out.
 - Performance: lazy/code-split heavy 3D, animate compositor-friendly props only,
   reserve space to avoid layout shift, compress assets. Targets: LCP < 2.5s,
@@ -180,7 +201,7 @@ Most flashy sites fail here, which is exactly why doing it well makes work stand
   focus states, sufficient contrast, `rem` not `px`, non-hover paths. Full playbook:
   `references/accessibility.md`.
 
-### 7. Open it in a real browser and inspect before calling it done (mandatory)
+### 8. Open it in a real browser and inspect before calling it done (mandatory)
 Never mark the work done from the code alone. Always load the built page in a real
 browser (Chrome, via the browser tools when available) and look at it before claiming
 it is finished. If you cannot open a browser, say so explicitly rather than implying it
@@ -240,6 +261,11 @@ Even without reading the references, hold these:
   direction.
 - **An intentional layout.** Breakout, asymmetry, or a strong structural device, not
   equal centered cards.
+- **Show styles, don't name them.** When the direction is not already fixed,
+  render 4-6 curated style options in the browser (the user's own content in
+  every tile) and let the user pick what they can SEE, then do the same for
+  palettes. Users cannot be expected to know style names; a pick they saw is
+  a result they expect. See `references/style-picker.md`.
 - **Architecture from the artifact, not a reused skeleton.** Do not ship the same
   nav + eyebrow + accent-word headline + CTA structure for every brief. And do not
   lean on the same one signature device every single time. The mono-eyebrow plus a
@@ -304,9 +330,9 @@ Even without reading the references, hold these:
 honors `prefers-reduced-motion`). Paste and adapt, do not treat as a fixed framework:
 - Visual: `oklch-theme.css`, `fluid-type.css`, `grain-overlay.css`,
   `editorial-grid.css`, `bento-grid.css`.
-- Motion: `scroll-reveal.css`, `split-text-reveal.js`, `magnetic-button.js`,
-  `custom-cursor.js`, `lenis-gsap-sync.js`, `velocity-marquee.js`,
-  `directional-underline.css`.
+- Motion: `scroll-reveal.css`, `parallax-layers.css`, `sticky-stack.css`,
+  `split-text-reveal.js`, `magnetic-button.js`, `custom-cursor.js`,
+  `lenis-gsap-sync.js`, `velocity-marquee.js`, `directional-underline.css`.
 - React: `react/useReducedMotion.ts`, `react/motion-tokens.ts`, `react/TiltCard.tsx`,
   `react/MeshGradient.tsx`, `react/FluidGlass.tsx`.
 - Generative: `generative/flow-field.js`, `generative/fbm-background.glsl`,
@@ -321,18 +347,21 @@ Read the file relevant to the step you are on; do not load all of them upfront.
 |------|-----------|
 | `references/foundations.md` | Always worth a glance: the principles of awe + the canon craft rules (hierarchy, systems, whitespace, type, motion). |
 | `references/aesthetic-directions.md` | Step 1, choosing the art direction. |
-| `references/typography.md` | Step 2, picking and setting type; named faces and foundries. |
-| `references/color-and-atmosphere.md` | Step 2, palette, OKLCH theming, grain/gradient/glass. |
-| `references/layout-and-composition.md` | Step 2, grids, breakout, bento, scroll architecture. |
-| `references/imagery-and-illustration.md` | Step 2, choosing imagery (photo vs 3D vs AI vs SVG) and making illustration high-fidelity. |
-| `references/motion-and-interaction.md` | Step 3, scroll, transitions, cursors, easing, kinetic type, Rive vs Lottie. |
-| `references/webgl-3d-and-generative.md` | Step 4, when 3D/shaders/generative earn their place. |
-| `references/app-and-product-ui.md` | Step 5, app/dashboard/product UI work. |
+| `references/design-styles-catalog.md` | Step 2, the named styles the picker curates from: essences, signatures, tile recipes. |
+| `references/style-picker.md` | Step 2, the show-dont-name workflow: tasting menus, palette variants, skip rules. |
+| `references/typography.md` | Step 3, picking and setting type; named faces and foundries. |
+| `references/color-and-atmosphere.md` | Step 3, palette, OKLCH theming, color derivation, dark mode, grain/gradient/glass. |
+| `references/layout-and-composition.md` | Step 3, grids, breakout, bento, scroll architecture. |
+| `references/imagery-and-illustration.md` | Step 3, choosing imagery (photo vs 3D vs AI vs SVG) and making illustration high-fidelity. |
+| `references/motion-and-interaction.md` | Step 4, scroll, transitions, cursors, easing, kinetic type, Rive vs Lottie. |
+| `references/scrollytelling-and-parallax.md` | Step 4, parallax and scroll-driven storytelling: the two honest jobs, craft numbers, tool choice. |
+| `references/webgl-3d-and-generative.md` | Step 5, when 3D/shaders/generative earn their place. |
+| `references/app-and-product-ui.md` | Step 6, app/dashboard/product UI work. |
 | `references/narrative-and-detail.md` | Loaders, intros, sound, and the micro-details that leave a lasting impression. |
 | `references/signature-builds.md` | Worked teardowns of standout archetypes (the single-metaphor site, the editorial work index) and the reusable moves behind them. |
-| `references/accessibility.md` | Step 6, the stunning-and-accessible playbook. |
+| `references/accessibility.md` | Step 7, the stunning-and-accessible playbook. |
 | `references/tech-stack.md` | Choosing libraries: the library-to-effect map and framework notes. |
-| `references/anti-slop-checklist.md` | Step 7, the final pre-ship pass. |
+| `references/anti-slop-checklist.md` | Step 8, the final pre-ship pass. |
 
 ## Posture
 
