@@ -16,6 +16,8 @@ framework: paste, then tune to the concept.
 | `bento-grid.css` | Container-query bento with `aspect-ratio` tiles + wide/tall spans | Part 5 |
 | `scroll-reveal.css` | Reveal-on-enter via `animation-timeline: view()` + a scroll progress bar | Part 6 |
 | `directional-underline.css` | Link underline that draws from the cursor's entry side | Part 9 |
+| `parallax-layers.css` | Three-layer depth parallax via `animation-timeline: view()` (back/mid/front ratios, content at 1x), touch and reduced-motion gated | Part 6 |
+| `sticky-stack.css` | Sticky stacking cards with gated scale/dim cover effect; the mobile-safe wow-per-byte pattern | Part 6 |
 
 ## Vanilla JS (ESM; GSAP where noted)
 

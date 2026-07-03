@@ -1,0 +1,68 @@
+/*
+ * parallax-layers.css
+ * ------------------------------------------------------------------
+ * Three-layer depth parallax driven entirely by CSS scroll-driven
+ * animations (`animation-timeline: view()`). No JS. As the scene
+ * crosses the viewport, each layer translates a different amount:
+ * back moves least, front moves most, so the differential reads as
+ * depth. Content (text) stays at 1x: never parallax copy.
+ *
+ * HOW TO USE
+ *   <section class="plx-scene">
+ *     <div class="plx-layer plx-layer--back">  ...sky/atmosphere  </div>
+ *     <div class="plx-layer plx-layer--mid">   ...focal imagery   </div>
+ *     <div class="plx-layer plx-layer--front"> ...foreground accent</div>
+ *     <div class="plx-content">                ...headline, copy  </div>
+ *   </section>
+ *   Layers are absolutely positioned imagery; `.plx-content` is normal
+ *   flow and NEVER animated.
+ *
+ * CRAFT NUMBERS (see references/scrollytelling-and-parallax.md)
+ *   back ~0.3x, mid ~0.65x, front slightly >1x. Expressed here as
+ *   translate ranges; tune per composition, keep the ratios.
+ *
+ * GATING
+ *   Effect only attaches inside no-preference reduced-motion AND
+ *   fine-pointer media queries, AND behind @supports. Everyone else
+ *   (touch, reduced-motion, unsupported browsers) gets the static,
+ *   fully-visible scene.
+ *
+ * DEPENDENCIES
+ *   None. Scroll-driven animations: Chrome/Edge 115+, Safari 26+.
+ * ------------------------------------------------------------------
+ */
+
+.plx-scene {
+  position: relative;
+  overflow: clip;          /* layers overshoot; clip, don't scroll */
+  min-height: 100vh;
+}
+
+.plx-layer {
+  position: absolute;
+  inset: -12% 0;           /* bleed so translated layers never gap */
+  pointer-events: none;
+}
+
+.plx-content {
+  position: relative;      /* stays at 1x, above the layers */
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  @supports (animation-timeline: view()) {
+    .plx-layer {
+      animation: linear both;
+      animation-timeline: view();
+      will-change: transform;
+    }
+    .plx-layer--back  { animation-name: plx-back; }
+    .plx-layer--mid   { animation-name: plx-mid; }
+    .plx-layer--front { animation-name: plx-front; }
+  }
+}
+
+/* Back barely drifts; front sweeps past. */
+@keyframes plx-back  { from { transform: translateY(-4%); }  to { transform: translateY(4%); } }
+@keyframes plx-mid   { from { transform: translateY(-8%); }  to { transform: translateY(8%); } }
+@keyframes plx-front { from { transform: translateY(-14%); } to { transform: translateY(14%); } }
