@@ -46,7 +46,7 @@ offer two near-neighbors (japandi vs scandinavian) in the same menu.
 - **Essence:** "Movie poster." One subject blazing out of darkness; trailer-grade drama.
 - **Signature:** Near-black canvas, single directional light source; huge thin type or tight-tracked caps; desaturated plus one accent; letterboxed imagery; slow zooms, film grain.
 - **Fits:** Film/TV, automotive, watches, fragrance, game launches, premium anything.
-- **Tile recipe:** bg `#0a0a0a`; ink `#f2f0eb`; accent `#c8102e`; display `"Helvetica Neue", Arial, sans-serif` at 200 weight or tracked caps; device: spotlight `radial-gradient(circle at 60% 30%, rgba(255,255,255,.14), transparent 55%)`, grain overlay, 21:9 image crop fading to black.
+- **Tile recipe:** bg `#0a0a0a`; ink `#f2f0eb`; accent `#e5484d`; display `"Helvetica Neue", Arial, sans-serif` at 200 weight or tracked caps; device: spotlight `radial-gradient(circle at 60% 30%, rgba(255,255,255,.14), transparent 55%)`, grain overlay, 21:9 image crop fading to black.
 
 ### 7. Organic Calm (japandi / wabi-sabi)
 - **Essence:** "Spa quiet." A warm, careful room with one perfect object; imperfection honored.
