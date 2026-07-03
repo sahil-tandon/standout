@@ -314,6 +314,9 @@ fallbacks.
 | Art Deco | ink black + metallic gold + one jewel tone (emerald, sapphire, oxblood); cream as the light neutral |
 | Cyberpunk Terminal | tinted near-black + 1-2 neons (acid yellow, cyan, magenta) with glow; or phosphor green |
 | Neo-Brutalism | 2-3 bold flats max: black + cream + one loud hue; no gradients |
+| Brutalist Raw | white + black + default hyperlink blue; garish clashes only if deliberate |
+| Memphis Pop | white or cream base + hot pink, teal, yellow at matched saturation, black outlines |
+| Playful Clay | pale pastel base (lavender, mint, butter) + one candy accent; low contrast softened by big radii |
 | Minimal/Swiss | white + black + one primary (classically red) |
 | Editorial / Quiet Luxury | cream or ivory + ink + one deep accent (bordeaux, forest, navy); warm grays |
 | Cottagecore | butter yellow, sage, dusty rose, cream, gingham red |
