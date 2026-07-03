@@ -239,3 +239,89 @@ above, which is a lightweight perceptual dither.
 **Layered transparency:** stack translucent panels to add depth without introducing new
 colors. Each semi-transparent layer over the aurora reads as a new plane of the same
 material.
+
+---
+
+## Deriving variations from one color (the S/B seesaw)
+
+The core palette skill is not picking many colors; it is modifying ONE base
+color into many correct variations. Work in HSB (or OKLCH L/C):
+
+- **Darker variant = lower Brightness AND higher Saturation.** Lowering
+  brightness alone adds black and reads muddy; real shadows are more
+  saturated.
+- **Lighter variant = higher Brightness AND lower Saturation** (adding white).
+- **Hue nudging (refinement):** hues differ in inherent luminosity. Darkening?
+  nudge hue a few degrees toward the nearest of 0/120/240 (red/green/blue).
+  Lightening? toward 60/180/300 (yellow/cyan/magenta). Shifts are tiny (1-5
+  degrees).
+- Workable defaults (extrapolated, tune by eye): hover S+8..12 B-8..12;
+  pressed S+15..20 B-15..20; tinted background same hue at S 4..8, B 95..98.
+
+## Tinted neutrals, never flat gray
+
+Pure grays (`#f5f5f5`, `#808080`, `#333`) almost never occur in the real
+world and instantly read un-art-directed. Tint every neutral with the brand
+hue: in OKLCH, keep the hue, set C around 0.01-0.02, and ramp L from about 97
+down to 12; allow slightly more chroma at the dark end. Cool-tinted grays
+read tech and clean; warm-tinted grays read organic, editorial, premium
+print. This one move makes an entire page feel intentionally colored before a
+single accent lands.
+
+## The constant-L trick (contrast you can guarantee)
+
+OKLCH is perceptually uniform: equal L is equal perceived brightness across
+hues. So derive semantic colors (success, warning, error, info) by keeping L
+and C fixed and rotating only H. Identical L means identical contrast ratios:
+verify the pair once, and every derived hue passes with it. High-chroma
+corners can exceed sRGB; clamp to the nearest in-gamut value and keep hex
+fallbacks.
+
+## Dark mode is a derivation, not an inversion
+
+- Never pure `#000` (halation with light text). Base surface at OKLCH L
+  10-15, tinted with the brand hue.
+- **Elevation is lighter surfaces, not shadows:** base L 10, cards L 14-16,
+  popovers L 18-20; each 3-4 L points reads as one layer up.
+- **Desaturate per hue:** light-mode saturations vibrate on dark. Blues and
+  cyans need roughly 20-30 percent less saturation; reds and oranges only
+  10-15; greens like a 3-5 degree shift toward teal; yellows want a redesign
+  toward amber, not desaturation.
+- Body text is off-white (around 87 percent), never pure white.
+
+## What award-tier sites do with color
+
+- **Commit to a dominant color MASS.** Winners flood the viewport with a
+  committed tone (deep green, cream, ink, acid brights); white becomes the
+  secondary. A white page with a timid accent is the template look.
+- **Vibrant complementary tension, modulated:** saturated non-adjacent pairs,
+  but the vivid notes sit inside muted neutral fields that direct the eye.
+- **Atmospheric gradients as environment,** not decoration: multi-stop,
+  evoking natural light, always with grain over them to kill banding.
+- **Duotone as identity:** two colors carrying the whole site (including
+  duotone-mapped photography) reads instantly art-directed and unifies
+  inconsistent imagery.
+- **Unexpected category palettes:** keep ONE cue from the category
+  (typography or imagery) and break the color expectation, so it reads
+  intentional rather than wrong. Nutrition in night-shift near-blacks,
+  banking in warm cream, water in metal-band black.
+
+## Style-to-palette pairings (starting points, not laws)
+
+| Style | Characteristic palette |
+|---|---|
+| Organic Calm | rice-paper, oat, sand, charcoal (never `#000`), muted matcha or clay accent |
+| Art Deco | ink black + metallic gold + one jewel tone (emerald, sapphire, oxblood); cream as the light neutral |
+| Cyberpunk Terminal | tinted near-black + 1-2 neons (acid yellow, cyan, magenta) with glow; or phosphor green |
+| Neo-Brutalism | 2-3 bold flats max: black + cream + one loud hue; no gradients |
+| Minimal/Swiss | white + black + one primary (classically red) |
+| Editorial / Quiet Luxury | cream or ivory + ink + one deep accent (bordeaux, forest, navy); warm grays |
+| Cottagecore | butter yellow, sage, dusty rose, cream, gingham red |
+| Mid-Century | mustard, burnt orange, teal, olive, cream; desaturated warmth |
+| Cinematic Noir | desaturated near-black world + one hot accent + off-white type |
+| Glass & Aurora | one committed dark base + 2-3 analogous glow hues, grain over everything |
+| Synthwave / Y2K | deep purple base + neon magenta/cyan; or chrome + holo pastels |
+| Dark Academia | espresso, forest, brass, parchment |
+
+For the palette-variant round of the picker (3-4 options per chosen style,
+varied on value / temperature / volume axes), see `style-picker.md`.
