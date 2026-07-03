@@ -17,7 +17,7 @@ Per-plugin versions in this release: standout-design 0.3.0, standout-notificatio
   recipes, family map, and do-not-offer list) and `style-picker.md` (the workflow).
 - `references/scrollytelling-and-parallax.md`: scroll as a storytelling axis. The two
   honest jobs rule (ambient depth vs a nameable narrative axis), an 11-technique
-  taxonomy, craft numbers (3 layers, 0.2-0.5x ratios, text at 1x), scroll-jacking
+  taxonomy, craft numbers (3 layers, 0.2-0.4x background ratios, text at 1x), scroll-jacking
   limits, the mobile-safe subset, and the 2026 tool table.
 - Two snippets: `parallax-layers.css` (CSS scroll-driven 3-layer depth) and
   `sticky-stack.css` (sticky stacking cards), both reduced-motion safe.
