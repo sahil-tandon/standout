@@ -1,6 +1,8 @@
 {
   "name": "standout",
-  "description": "The standout-* family of craft plugins for Claude Code: distinctive design, and a polished notification experience.",
+  "metadata": {
+    "description": "The standout-* family of craft plugins for Claude Code: distinctive design, and a polished notification experience."
+  },
   "owner": {
     "name": "Sahil Tandon"
   },
