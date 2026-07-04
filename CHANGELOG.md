@@ -4,6 +4,36 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and this project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## [v0.3.0] (2026-07-03): Style picker, scroll craft, new teardowns
+
+Per-plugin versions in this release: standout-design 0.3.0, standout-notifications 0.1.1.
+
+### Added
+- `standout-design` (0.3.0): a "show, don't name" step in the method. When the design
+  direction is open, the skill curates 4-6 styles, renders a tasting-menu HTML built
+  from the user's actual content, opens it in the browser, and lets the user pick, then
+  repeats the same flow for 3-4 palette variants varied on value / temperature / volume
+  axes. New references: `design-styles-catalog.md` (the 16-style picker set with tile
+  recipes, family map, and do-not-offer list) and `style-picker.md` (the workflow).
+- `references/scrollytelling-and-parallax.md`: scroll as a storytelling axis. The two
+  honest jobs rule (ambient depth vs a nameable narrative axis), an 11-technique
+  taxonomy, craft numbers (3 layers, 0.2-0.4x background ratios, text at 1x), scroll-jacking
+  limits, the mobile-safe subset, and the 2026 tool table.
+- Two snippets: `parallax-layers.css` (CSS scroll-driven 3-layer depth) and
+  `sticky-stack.css` (sticky stacking cards), both reduced-motion safe.
+- Three teardowns in `signature-builds.md`: the scrollytelling world (a persistent
+  scene whose camera and domain variables are scrubbed by scroll), the total artifact
+  metaphor (a portfolio executed entirely as a newspaper), and the one-gesture story
+  world (a picture-book game whose whole UI is one nostalgic artifact).
+
+### Changed
+- `color-and-atmosphere.md` gained palette-derivation craft: the S/B seesaw for
+  variants, brand-tinted neutrals over flat grays, the OKLCH constant-L contrast
+  trick, dark mode as derivation (not inversion), award-tier color findings, and a
+  style-to-palette pairing table.
+- SKILL.md method renumbered (the picker is the new Step 2); references table and
+  snippet index updated accordingly.
+
 ## [v0.2.1] (2026-06-26): Fix the tab-emoji setup instruction
 
 Per-plugin versions in this release: standout-design 0.2.0, standout-notifications 0.1.1.

@@ -1,0 +1,65 @@
+/*
+ * sticky-stack.css
+ * ------------------------------------------------------------------
+ * Sticky stacking cards: each card pins at the same offset and the
+ * next one scrolls up to cover it. The best wow-per-byte scroll
+ * pattern: robust, cheap, and safe on mobile (it is just position:
+ * sticky and normal flow).
+ *
+ * Optional enhancement (gated): as a card is covered, it scales down
+ * and dims slightly, driven by `animation-timeline: view()` over its
+ * exit range, which sells the "pushed into the deck" feel.
+ *
+ * HOW TO USE
+ *   <div class="stack">
+ *     <article class="stack-card">...</article>
+ *     <article class="stack-card">...</article>
+ *     <article class="stack-card">...</article>
+ *   </div>
+ *   Give cards an opaque background (they overlap). Tune --stack-top
+ *   (pin offset) and --stack-gap (breathing room between pinned tops).
+ *
+ * GATING
+ *   Base behavior is plain sticky: works everywhere, no motion, all
+ *   content visible. The scale/dim enhancement only attaches under
+ *   no-preference reduced-motion AND @supports view timelines.
+ *
+ * DEPENDENCIES
+ *   None. Enhancement: Chrome/Edge 115+, Safari 26+.
+ * ------------------------------------------------------------------
+ */
+
+.stack {
+  --stack-top: 5rem;       /* where each card pins */
+  --stack-gap: 2rem;       /* extra offset per card, set >0 to fan tops */
+  display: block;
+}
+
+.stack-card {
+  position: sticky;
+  top: var(--stack-top);
+  margin-bottom: 12vh;      /* scroll runway between cards */
+  border-radius: 16px;
+  /* Cards overlap: keep backgrounds opaque in your theme. */
+}
+
+.stack-card:last-child { margin-bottom: 0; }
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .stack-card {
+      animation: stack-away linear both;
+      animation-timeline: view();
+      /* Only while the card exits: as the next card covers it. */
+      animation-range: exit 0% exit 100%;
+      transform-origin: 50% 0;
+    }
+  }
+}
+
+@keyframes stack-away {
+  to {
+    transform: scale(.94);
+    filter: brightness(.85);
+  }
+}

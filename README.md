@@ -35,9 +35,19 @@ standout/
 
 ## Updating
 
+Updates are not automatic (third-party marketplaces have auto-update off by
+default). To pick up a new release, refresh the catalog, then update the
+plugin:
+
 ```
 /plugin marketplace update standout
+/plugin update standout-design
 ```
+
+Or enable auto-update once (`/plugin` > Marketplaces > standout > Enable
+auto-update) and Claude Code will check at session startup and prompt
+`/reload-plugins` when something updated. Each release is documented in
+[CHANGELOG.md](CHANGELOG.md).
 
 ## Developing locally
 

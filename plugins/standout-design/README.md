@@ -17,18 +17,21 @@ page, landing site, portfolio, dashboard, or app UI, `standout-design` activates
 guides it through a real design process:
 
 1. **Commit to a concept and one bold direction** before any code.
-2. **Build the visual system**: distinctive typography (never default fonts), a
+2. **Show, don't name**: when the direction is open, render 4-6 style options in
+   the browser using your actual content, let you pick, then do the same for
+   palettes. No need to know what "japandi" means; you pick what you can see.
+3. **Build the visual system**: distinctive typography (never default fonts), a
    dominant color plus one sharp accent in OKLCH, atmosphere over flat fills, and an
    intentional layout.
-3. **Add purposeful motion**: one orchestrated reveal, a single reused easing token,
+4. **Add purposeful motion**: one orchestrated reveal, a single reused easing token,
    compositor-friendly only.
-4. **Reach for advanced visuals (WebGL, shaders, generative) only when they serve the
+5. **Reach for advanced visuals (WebGL, shaders, generative) only when they serve the
    concept.**
-5. **Switch modes for apps and product UI**: density, the proven component stack, the
+6. **Switch modes for apps and product UI**: density, the proven component stack, the
    "Linear look" as a system.
-6. **Gate on performance and accessibility**, the part most flashy sites skip, which
+7. **Gate on performance and accessibility**, the part most flashy sites skip, which
    is exactly why doing it well makes the work stand out.
-7. **Run an anti-slop checklist** before calling it done.
+8. **Run an anti-slop checklist** before calling it done.
 
 ## Install (Claude Code)
 
@@ -53,10 +56,13 @@ standout-design/
     ├── references/            craft guides, loaded on demand
     │   ├── foundations.md            principles of awe + the canon craft rules
     │   ├── aesthetic-directions.md   choosing a bold art direction
+    │   ├── design-styles-catalog.md  the named styles the picker offers
+    │   ├── style-picker.md           show-dont-name: browser style/palette picking
     │   ├── typography.md             distinctive type, named faces, techniques
     │   ├── color-and-atmosphere.md   OKLCH, gradients, grain, glass
     │   ├── layout-and-composition.md grids, breakout, bento, scroll architecture
     │   ├── motion-and-interaction.md scroll, transitions, cursors, easing, kinetic type
+    │   ├── scrollytelling-and-parallax.md scroll as a storytelling axis, done right
     │   ├── webgl-3d-and-generative.md when 3D/shaders/generative earn their place
     │   ├── app-and-product-ui.md     dashboards, product UI, the Linear look
     │   ├── narrative-and-detail.md   loaders, intros, sound, micro-details

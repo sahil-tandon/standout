@@ -19,6 +19,9 @@ stronger concept and tighter motion timing.
 2. [Archetype: the editorial work index](#archetype-the-editorial-work-index)
 3. [Harvested detail patterns](#harvested-detail-patterns)
 4. [The cohesion mechanics](#the-cohesion-mechanics)
+5. [Archetype: the scrollytelling world](#archetype-the-scrollytelling-world)
+6. [Archetype: the total artifact metaphor](#archetype-the-total-artifact-metaphor)
+7. [Archetype: the one-gesture story world](#archetype-the-one-gesture-story-world)
 
 ---
 
@@ -147,3 +150,100 @@ discipline that separates an award site from a busy one:
 - **Choreography on shared tokens.** Every reveal, hover, and scrub runs on the same
   easing and duration tokens and one scroll value, so a page full of motion still feels
   like one hand made it. (See `narrative-and-detail.md` "The discipline underneath".)
+
+---
+
+## Archetype: the scrollytelling world
+
+**Seen in the wild:** ON.energy's "Grid Volatility" expertise page. One
+continuous monochrome isometric city, drawn like a technical illustration
+with red grid lines and the brand's electric yellow as the only live color.
+
+**The move:** the entire page is ONE persistent scene, and scroll drives a
+camera through SCALE LEVELS: wide city, down to a battery farm, into a
+single container drawn x-ray style, then back out. Scroll simultaneously
+scrubs TIME: a fixed HUD widget shows a day clock and price ticker (1:06 AM
+at 40$/h to 6:26 PM at 470$/h) synced to a demand curve, while the battery
+cells in the scene visibly charge and discharge. The color legend IS the
+product story: yellow means charging when energy is cheap, red means
+discharging into scarcity. Nobody reads a paragraph about arbitrage; they
+watch it.
+
+**The narrative rhythm:** beats arrive as alternating cards in one fixed
+slot: a black "Challenge N" card states the problem, a brand-yellow
+"Solution N" card answers it, while the scene reconfigures behind them.
+Chapters swap the full page background (near-black hero, to a full-viewport
+brand-yellow interstitial, to the white illustrated world, to a black finale)
+to reset attention. The finale exits the illustration into plain,
+high-contrast stats over real photography: after twenty viewports inside a
+drawing, reality lands hard.
+
+**Reusable moves:**
+- Scrub a NAMEABLE domain axis (here: time and price), not just position.
+- A fixed HUD widget that translates scroll into the domain variable.
+- Challenge/solution card alternation as the story's meter.
+- A color legend that encodes the product's actual mechanism.
+- Camera through scale levels (city, site, machine) as the tour structure.
+- Full-bleed background color swaps as chapter breaks.
+- Exit the world for the proof: finish on plain type, stats, and photos.
+
+## Archetype: the total artifact metaphor
+
+**Seen in the wild:** Niccolo Miranda's "Paper Portfolio". The portfolio IS a
+newspaper: a cream sheet floating on a warm near-black desk (rgb(29,29,27),
+never flat #000).
+
+**The move:** commit to one printed artifact and let EVERY device on the
+page be a device of that artifact. Masthead in blackletter with a dateline
+("Amsterdam, NL"). Fat-face Didone headlines (Canopee) over a book serif
+(Editorial New, Domaine Display). Drop caps opening body columns. Hairline
+column rules. Work items presented as news features with captions.
+Testimonials as press clippings: dashed cut-out borders and portrait
+medallions. A postage stamp carrying the name, date, and signature. Service-
+journalism asides ("TIP! Drag sideways to navigate") doing the UI-hint work.
+The contact CTA as a ticker ribbon ("Let's create something together EMAIL
+ME") looping like a stop-press band. Paper grain everywhere; imagery is
+warm hand-drawn illustration, so even portraits obey the print world.
+
+**Why it lands:** none of the newspaper devices are decoration; each one
+carries real content (the stamp is the bio, the clippings are the social
+proof, the TIP! is the affordance). The metaphor is the information
+architecture.
+
+**The stack lesson:** built on Webflow with GSAP and Locomotive smooth
+scroll. Award-tier wow from choreography and art direction on a no-code
+platform: proof, again, that the engine is not the wow.
+
+**Reusable moves:**
+- Pick the artifact, then translate EVERY page element into that artifact's
+  native devices (nav, testimonials, CTAs, hints, metadata).
+- Metadata as in-world ephemera: stamps, datelines, edition numbers.
+- One illustration style unifying all imagery, portraits included.
+- The desk trick: float the artifact on a dark textured surround so the
+  page reads as a physical object with edges.
+
+## Archetype: the one-gesture story world
+
+**Seen in the wild:** Resn's "i-Spy" for HEIHEI (NZ kids' platform); Awwwards
+SOTD and FWA. A wimmelbilderbuch (teeming picture book) hidden-object game:
+six illustrated Aotearoa environments packed with thousands of hand-drawn
+characters by one artist (T Wei).
+
+**The move:** one nostalgic artifact metaphor (the road-trip postcard)
+carries the entire UI: navigation, level select, and rewards are all
+postcards, with design cues from classic Kiwi road signage. Interactions are
+limited to the three gestures a five-year-old already knows: touch, click,
+drag. Two modes (freeplay vs beat-the-clock) segment the audience without
+changing the world. The wow is not an engine; it is the DENSITY of
+hand-crafted detail in each scene and the warmth of the illustration.
+Aesthetic register: cream field, terracotta frame, vintage slab-serif and
+script pairing, characters drifting across the load screen.
+
+**Reusable moves:**
+- Radical interaction simplicity as a design feature, not a constraint:
+  choose an audience's known gestures and refuse to exceed them.
+- One artifact (postcard) as the entire chrome: nav, save state, rewards.
+- Craft density as the wow: one committed illustration style, thousands of
+  touches, zero stock.
+- Border-as-frame: a strong page-edge frame turns the viewport into a scene
+  the way a picture-book page does.
